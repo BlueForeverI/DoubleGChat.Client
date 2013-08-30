@@ -1,0 +1,13 @@
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\resources.pri
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\AppxManifest.xml
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\DoubleGChat.build.appxrecipe
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\priconfig.xml.intermediate
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\layout.resfiles.intermediate
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\resources.resfiles.intermediate
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\pri.resfiles.intermediate
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\priconfig.xml
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\layout.resfiles
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\resources.resfiles
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\pri.resfiles
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\LanguageQualifiers.txt
+D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\ProjectArchitectures.txt
