@@ -1,1 +1,1 @@
-D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\DoubleGChat.jsproj;neutral
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\DoubleGChat.jsproj;neutral

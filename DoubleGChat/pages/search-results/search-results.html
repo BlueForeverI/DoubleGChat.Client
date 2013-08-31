@@ -19,12 +19,13 @@
     <script src="code-behind.js"></script>
 </head>
 <body>
-
-    <div class="computer-template">
-        <img src="#" data-win-bind="src: profilePictureUrl" height="150" width="150" />
-        <h3 data-win-bind="innerText: username"></h3>
-<!--        <h4 data-win-bind="innerText: firstName"></h4>
-        <h4 data-win-bind="innerText: lastName"></h4>-->
+    <div id="user-template-container" data-win-control="WinJS.Binding.Template">
+        <div class="user-template">
+            <img src="#" data-win-bind="src: profilePictureUrl" height="150" width="150" />
+            <h3 data-win-bind="innerText: Username"></h3>
+            <!--        <h4 data-win-bind="innerText: firstName"></h4>
+                <h4 data-win-bind="innerText: lastName"></h4>-->
+        </div>
     </div>
 
     <!-- The content that will be loaded and displayed. -->

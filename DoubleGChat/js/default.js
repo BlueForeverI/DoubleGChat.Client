@@ -16,7 +16,21 @@
     var searchPageURI = "/pages/search-results/search-results.html";
 
     app.addEventListener("activated", function (args) {
+        var user = DoubleGChat.Controllers.User.getUserCredentials();
+        if (user) {
+            DoubleGChat.RemoteData.sendRequest(
+                DoubleGChat.Constants.baseUrl + "users/session",
+                "POST",
+                user).then(function () {
+                    nav.navigate("/pages/contacts/contacts.html");
+                }, function (error) {
+                    // invalid session key provided
+                });
+        }
+        
         if (args.detail.kind === activation.ActivationKind.launch) {
+            
+
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 // TODO: This application has been newly launched. Initialize
                 // your application here.
@@ -30,12 +44,12 @@
             }
 
             args.setPromise(WinJS.UI.processAll().then(function () {
-                if (nav.location) {
-                    nav.history.current.initialPlaceholder = true;
-                    return nav.navigate(nav.location, nav.state);
-                } else {
-                    return nav.navigate(Application.navigator.home);
-                }
+                //if (nav.location) {
+                //    nav.history.current.initialPlaceholder = true;
+                //    return nav.navigate(nav.location, nav.state);
+                //} else {
+                //    return nav.navigate(Application.navigator.home);
+                //}
             }));
         } else if (args.detail.kind === appModel.Activation.ActivationKind.search) {
             args.setPromise(ui.processAll().then(function () {
