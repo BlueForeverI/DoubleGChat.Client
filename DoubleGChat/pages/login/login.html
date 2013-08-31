@@ -10,6 +10,9 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="login.css" rel="stylesheet" />
+    <script src="../../js/view-models/user-view-model.js"></script>
+    <script src="../../js/user-controller.js"></script>
+    <script src="code-behind.js"></script>
     <script src="login.js"></script>
 </head>
 <body>
@@ -22,8 +25,9 @@
         </header>
         <section aria-label="Main content" role="main">
             <input id="username" type="text" name="username" value="" placeholder="username" />
-            <input id="password" type="password" name="password" value="" />
-            <button id="login">Login</button>
+            <input id="password" type="password" name="password" value="" placeholder="password" />
+            <button id="login" onclick="DoubleGChat.CodeBehind.UserLogin.login(event)">Login</button>
+            <span data-win-bind="innerText: errorMessage"></span>
         </section>
     </div>
 </body>

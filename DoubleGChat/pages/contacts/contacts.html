@@ -10,9 +10,22 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="contacts.css" rel="stylesheet" />
+    <script src="../../js/view-models/contacts-view-model.js"></script>
+    <script src="../../js/user-controller.js"></script>
+    <script src="../../js/contacts-controller.js"></script>
+    <script src="code-behind.js"></script>
     <script src="contacts.js"></script>
 </head>
 <body>
+    <div id="user-template-container" data-win-control="WinJS.Binding.Template">
+        <div class="computer-template">
+            <img src="#" data-win-bind="src: profilePictureUrl" height="150" width="150" />
+            <h3 data-win-bind="innerText: username"></h3>
+            <h4 data-win-bind="innerText: firstName"></h4>
+            <h4 data-win-bind="innerText: lastName"></h4>
+        </div>
+    </div>
+
     <div class="contacts fragment">
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
@@ -20,8 +33,16 @@
                 <span class="pagetitle">Welcome to contacts</span>
             </h1>
         </header>
+
         <section aria-label="Main content" role="main">
-            <p>Content goes here. Contacts</p>
+            <div data-win-control="WinJS.UI.ListView"
+                data-win-options="{
+                    itemTemplate: select('#user-template-container'),
+                    itemDataSource: DoubleGChat.ViewModels.Contacts.allContacts.dataSource,
+                    oniteminvoked: DoubleGChat.CodeBehind.Contacts.goToConversationPage,
+                    selectionMode: 'none'
+                    }">
+            </div>
         </section>
     </div>
 </body>

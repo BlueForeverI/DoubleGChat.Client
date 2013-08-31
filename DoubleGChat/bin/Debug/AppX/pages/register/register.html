@@ -10,6 +10,9 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="register.css" rel="stylesheet" />
+    <script src="../../js/view-models/user-view-model.js"></script>
+    <script src="../../js/user-controller.js"></script>
+    <script src="code-behind.js"></script>
     <script src="register.js"></script>
 </head>
 <body>
@@ -21,10 +24,12 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <input id="username" type="text" name="username" value="" placeholder="username" />
             <input id="first-name" type="text" name="first-name" value="" placeholder="first name" />
+            <input id="last-name" type="text" name="last-name" value="" placeholder="last name" />
+            <input id="username" type="text" name="username" value="" placeholder="username" />
             <input id="password" type="password" name="password" value="" placeholder="password" />
-            <button id="register">register</button>
+            <button id="register" onclick="DoubleGChat.CodeBehind.UserRegister.register(event)">register</button>
+            <span data-win-bind="innerText: errorMessage"></span>
         </section>
     </div>
 </body>

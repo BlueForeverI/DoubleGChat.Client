@@ -8,8 +8,7 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
-            var registerButton = document.getElementById("register");
-            registerButton.addEventListener("click", registerHandler);
+            WinJS.Binding.processAll(element, DoubleGChat.ViewModels.User);
             // TODO: Initialize the page here.
         },
 
@@ -23,19 +22,4 @@
             // TODO: Respond to changes in viewState.
         }
     });
-
-    var registerHandler = function (event) {
-        var userName = document.getElementById("username");
-        var password = document.getElementById("password");
-        var passwordHash = CryptoJS.SHA1(password.value).toString();
-        var firstName = document.getElementById("first-name");
-
-        var user = DoubleGChat.Models.User.define({ username: userName.value, passwordHash: passwordHash });
-        DoubleGChat.Controllers.User.register(user)
-        .done(function (userDetails) {
-            console.log(userDetails);
-        }, function (event) {
-            console.log(event);
-        });
-    };
 })();

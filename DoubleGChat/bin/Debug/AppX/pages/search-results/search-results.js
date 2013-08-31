@@ -1,38 +1,25 @@
-﻿// For an introduction to the Search Contract template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkId=232512
-
-// TODO: Add the following script tag to the start page's head to
-// subscribe to search contract events.
-//  
-// <script src="/pages/search-results/search_results.js"></script>
-
-(function () {
+﻿(function () {
     "use strict";
 
-    WinJS.Binding.optimizeBindingReferences = true;
+    WinJS.UI.Pages.define("/pages/search-results/search-results.html", {
+        init: function (element, options) {
+            DoubleGChat.Controllers.Search.getUsersByQueryText(options.queryText);
+        },
+        // This function is called whenever a user navigates to this page. It
+        // populates the page elements with the app's data.
+        ready: function (element, options) {
+            console.log(1);
+            // TODO: Initialize the page here.
+        },
 
-    var appModel = Windows.ApplicationModel;
-    var appViewState = Windows.UI.ViewManagement.ApplicationViewState;
-    var nav = WinJS.Navigation;
-    var ui = WinJS.UI;
-    var utils = WinJS.Utilities;
-    var searchPageURI = "/pages/search-results/search_results.html";
+        unload: function () {
+            // TODO: Respond to navigations away from this page.
+        },
 
-    ui.Pages.define(searchPageURI, {
+        updateLayout: function (element, viewState, lastViewState) {
+            /// <param name="element" domElement="true" />
 
-    });
-
-    WinJS.Application.addEventListener("activated", function (args) {
-        if (args.detail.kind === appModel.Activation.ActivationKind.search) {
-            args.setPromise(ui.processAll().then(function () {
-                if (!nav.location) {
-                    nav.history.current = { location: Application.navigator.home, initialState: {} };
-                }
-
-                return nav.navigate(searchPageURI, { queryText: args.detail.queryText });
-            }));
+            // TODO: Respond to changes in viewState.
         }
     });
-
-    appModel.Search.SearchPane.getForCurrentView().onquerysubmitted = function (args) { nav.navigate(searchPageURI, args); };
 })();
