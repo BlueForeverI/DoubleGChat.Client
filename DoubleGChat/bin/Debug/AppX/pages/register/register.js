@@ -1,4 +1,5 @@
-﻿// For an introduction to the Page Control template, see the following documentation:
+﻿/// <reference path="../../js/sha1.js" />
+// For an introduction to the Page Control template, see the following documentation:
 // http://go.microsoft.com/fwlink/?LinkId=232511
 (function () {
     "use strict";
@@ -26,9 +27,10 @@
     var registerHandler = function (event) {
         var userName = document.getElementById("username");
         var password = document.getElementById("password");
+        var passwordHash = CryptoJS.SHA1(password.value).toString();
         var firstName = document.getElementById("first-name");
 
-        var user = DoubleGChat.Models.User.define({ username: userName.value, passwordHash: password.value });
+        var user = DoubleGChat.Models.User.define({ username: userName.value, passwordHash: passwordHash });
         DoubleGChat.Controllers.User.register(user)
         .done(function (userDetails) {
             console.log(userDetails);

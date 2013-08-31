@@ -11,3 +11,16 @@ D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\reso
 D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\pri.resfiles
 D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\LanguageQualifiers.txt
 D:\SkyDrive\Telerik\WinJs\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\ProjectArchitectures.txt
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\resources.pri
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\AppxManifest.xml
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\DoubleGChat.build.appxrecipe
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\priconfig.xml.intermediate
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\layout.resfiles.intermediate
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\resources.resfiles.intermediate
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\pri.resfiles.intermediate
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\priconfig.xml
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\layout.resfiles
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\resources.resfiles
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\pri.resfiles
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\LanguageQualifiers.txt
+C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bld\Debug\ProjectArchitectures.txt

@@ -8,6 +8,7 @@ js\constants.js
 js\data-requester.js
 js\default.js
 js\navigator.js
+js\sha1.js
 js\user-controller.js
 js\user-model.js
 pages\contacts\contacts.css
@@ -22,6 +23,7 @@ pages\home\home.js
 pages\login\login.css
 pages\login\login.html
 pages\login\login.js
+pages\login\login-view-model.js
 pages\register\register.css
 pages\register\register.html
 pages\register\register.js

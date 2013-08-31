@@ -29,8 +29,9 @@
     var loginHandler = function (event) {
         var userName = document.getElementById("username");
         var password = document.getElementById("password");
+        var passwordHash = CryptoJS.SHA1(password.value).toString();
 
-        var user = DoubleGChat.Models.User.define({ username: userName.value, passwordHash: password.value });
+        var user = DoubleGChat.Models.User.define({ username: userName.value, passwordHash: passwordHash });
         DoubleGChat.Controllers.User.login(user)
             .done(function () {
                 WinJS.Navigation.navigate("/pages/contacts/contacts.html");
