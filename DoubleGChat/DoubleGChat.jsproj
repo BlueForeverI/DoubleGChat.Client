@@ -71,6 +71,7 @@
     <Content Include="js\user-controller.js" />
     <Content Include="js\user-model.js" />
     <Content Include="js\view-models\contacts-view-model.js" />
+    <Content Include="js\view-models\conversation-view-model.js" />
     <Content Include="js\view-models\search-view-model.js" />
     <Content Include="js\view-models\user-view-model.js" />
     <Content Include="pages\contacts\code-behind.js" />
