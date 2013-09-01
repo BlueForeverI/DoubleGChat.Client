@@ -22,7 +22,7 @@
         
         DoubleGChat.Controllers.User.register(user)
         .done(function (userDetails) {
-            WinJS.Navigation.navigate("/pages/login/login.html");
+            WinJS.Navigation.navigate("/pages/contacts/contacts.html");
         });
     };
 

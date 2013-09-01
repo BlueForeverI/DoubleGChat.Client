@@ -1,17 +1,12 @@
 ﻿(function () {
     "use strict";
 
-    var isActiveUserSession = function (user) {
-        var user = DoubleGChat.Controllers.User.getUserCredentials();
-        return new WinJS.Promise(function (success, error, progress) {
-            progress();
-            if (user) {
-                DoubleGChat.RemoteData.sendRequest(loginUrl, "POST", user)
-                .done(success, error);
-            } else {
-                error();
-            }
-        });
+    var getUserCredentials = function () {
+        return DoubleGChat.Data.User.getUserCredentials();
+    };
+
+    var loginWIthCurrentUserSession = function () {
+        return DoubleGChat.Data.User.loginWithCurrentSession();
     }
 
     var login = function (user) {
@@ -51,6 +46,7 @@
         login: login,
         register: register,
         getUserCredentials: getUserCredentials,
-        logout: logout
+        logout: logout,
+        loginWIthCurrentUserSession: loginWIthCurrentUserSession
     });
 }());
