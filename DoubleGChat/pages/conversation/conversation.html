@@ -10,6 +10,7 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="conversation.css" rel="stylesheet" />
+    <script src="../../js/view-models/conversation-view-model.js"></script> />
     <script src="conversation.js"></script>
 </head>
 <body>
@@ -21,7 +22,33 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p>Content goes here.</p>
+            <div id="message-template" data-win-control="WinJS.Binding.Template">
+                <span class="username-container" data-win-bind="innerText: sender.username"></span>
+                :
+                <span class="message-container" data-win-bind="innerText: content"></span>
+            </div>
+
+            <div id="partner-info-container">
+                <img id="partner-info-picture" 
+                     data-win-bind="src: partner.profilePictureUrl" src="#"/>
+                <span id="partner-username" 
+                      data-win-bind="innerText: partner.username"></span>
+
+            </div>
+            <div id="messages-container">
+                <div id="messages-list-view" data-win-control="WinJS.UI.ListView"
+                     data-win-options="{
+	                    itemTemplate: select('#message-template'),
+                        itemDataSource: DoubleGChat.ViewModels.Conversation.messages.dataSource
+                     }">
+                    
+                </div>
+            </div>
+
+            <div id="send-controls-container">
+                <input type="text" id="message-content-text" />
+                <input type="button" id="send-message-button" value="Send"/>
+            </div>
         </section>
     </div>
 </body>

@@ -8,6 +8,12 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
             // TODO: Initialize the page here.
+            WinJS.Binding.processAll(element, DoubleGChat.ViewModels.Conversation);
+
+            DoubleGChat.ViewModels.Conversation.setMessages([
+                { sender: { username: "Pesho" }, content: "Hello" },
+                { sender: { username: "GOsho" }, content: "Zdrasti" }
+            ]);
         },
 
         unload: function () {
