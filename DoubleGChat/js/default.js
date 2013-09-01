@@ -59,6 +59,13 @@
                 return nav.navigate(searchPageURI, { queryText: args.detail.queryText });
             }));
         }
+
+        WinJS.Application.onsettings = function(e) {
+            e.detail.applicationcommands =
+                { "profile-settings": { title: "Profile Settings", href: "/pages/profile-settings/profile-settings.html" } };
+            
+            WinJS.UI.SettingsFlyout.populateSettings(e);
+        };
     });
 
     appModel.Search.SearchPane.getForCurrentView().onquerysubmitted = function (args) { nav.navigate(searchPageURI, args); };
