@@ -60,8 +60,10 @@
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="js\constants.js" />
+    <Content Include="js\contact-request-controller.js" />
     <Content Include="js\contacts-controller.js" />
     <Content Include="js\data-requester.js" />
+    <Content Include="js\data\contacts-data-layer.js" />
     <Content Include="js\data\user-data-layer.js" />
     <Content Include="js\default-code-behind.js" />
     <Content Include="js\default.js" />
@@ -71,6 +73,7 @@
     <Content Include="js\user-controller.js" />
     <Content Include="js\user-model.js" />
     <Content Include="js\view-models\contacts-view-model.js" />
+    <Content Include="js\view-models\global-view-model.js" />
     <Content Include="js\view-models\search-view-model.js" />
     <Content Include="js\view-models\user-view-model.js" />
     <Content Include="pages\contacts\code-behind.js" />

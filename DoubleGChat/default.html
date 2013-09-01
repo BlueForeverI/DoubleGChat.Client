@@ -15,14 +15,35 @@
     <script src="js/data-requester.js"></script>
 
     <!-- DoubleGChat references -->
+    <script src="js/data/user-data-layer.js"></script>
     <script src="js/user-controller.js"></script>
+    <script src="js/contacts-controller.js"></script>
     <link href="/css/default.css" rel="stylesheet" />
+    <script src="js/view-models/global-view-model.js"></script>
     <script src="js/default-code-behind.js"></script>
     <script src="/js/default.js"></script>
     <script src="/js/navigator.js"></script>
 </head>
 <body>
-    <button id="logout" onclick="DoubleGChat.CodeBehind.Default.logout(event)">logout</button>
+    <div id="contact-requests-template-container" data-win-control="WinJS.Binding.Template">
+        <div class="user-template">
+            <img src="#" data-win-bind="src: profilePictureUrl" height="150" width="150" />
+            <h3 data-win-bind="innerText: username"></h3>
+        </div>
+    </div>
+
+    <button onclick="DoubleGChat.CodeBehind.Default.logout(event)">logout</button>
+    <button onclick="DoubleGChat.CodeBehind.Default.goToRegister(event)">Register</button>
+
+    <div data-win-bind="innerText: contactRequestsCount"></div>
+    <div id="search-results-list-view" data-win-control="WinJS.UI.ListView"
+        data-win-options="{
+                    itemTemplate: select('#user-template-container'),
+                    itemDataSource: DoubleGChat.ViewModels.Global.contactRequests.dataSource,
+                    selectionMode: 'single'
+                    }">
+    </div>
+
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/login/login.html'}"></div>
     <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>

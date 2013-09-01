@@ -15,23 +15,19 @@
     var utils = WinJS.Utilities;
     var searchPageURI = "/pages/search-results/search-results.html";
 
-    app.addEventListener("activated", function (args) {
-        var user = DoubleGChat.Controllers.User.getUserCredentials();
-        if (user) {
-            DoubleGChat.RemoteData.sendRequest(
-                DoubleGChat.Constants.baseUrl + "users/session",
-                "POST",
-                user).then(function () {
-                    nav.navigate("/pages/contacts/contacts.html");
-                }, function (error) {
-                    // invalid session key provided
-                });
-        }
-        
-        if (args.detail.kind === activation.ActivationKind.launch) {
-            
+    var loginWithSessionKey = function () {
+        return DoubleGChat.Controllers.User.loginWIthCurrentUserSession()
+            .then(function () {
+                return nav.navigate("/pages/contacts/contacts.html");
+            }, function () { });
+    };
 
+    app.addEventListener("activated", function (args) {
+        if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
+                if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.suspended) {
+                    args.setPromise(loginWithSessionKey());
+                }
                 // TODO: This application has been newly launched. Initialize
                 // your application here.
             } else {

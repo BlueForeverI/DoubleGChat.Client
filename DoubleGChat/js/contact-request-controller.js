@@ -4,19 +4,6 @@
     var contactsUrl = DoubleGChat.Constants.baseUrl + "contacts/";
     var user = DoubleGChat.Data.User.getUserCredentials();
 
-    var getFriends = function () {
-        DoubleGChat.RemoteData.sendRequest(contactsUrl, "get", null, user.sessionKey)
-        .done(function (response) {
-            var data = JSON.parse(response.response);
-            data.forEach(function (item) {
-                DoubleGChat.ViewModels.Contacts.allContacts.push(item);
-            });
-        }, function (response) {
-            var data = JSON.parse(response.response);
-            console.log(data);
-        });
-    }; 
-
     var getContactRequests = function () {
         var requestContactUrl = contactsUrl + "requests";
         DoubleGChat.RemoteData.sendRequest(requestContactUrl, "get", null, user.sessionKey)
@@ -65,8 +52,6 @@
             console.log(data);
         });
     }
-
-    getFriends();
 
     WinJS.Namespace.define("DoubleGChat.Controllers.Contacts", {
         sendContactRequest: sendContactRequest
