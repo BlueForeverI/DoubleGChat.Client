@@ -7,7 +7,7 @@
     var getUsersByQueryText = function(queryText) {
         return new WinJS.Promise(function(success, error, progress) {
             progress();
-            DoubleGChat.RemoteData.sendRequest(usersUrl, "POST", { queryText: queryText }, user.SessionKey)
+            DoubleGChat.RemoteData.sendRequest(usersUrl, "POST", { queryText: queryText }, user.sessionKey)
                 .then(function (userDetails) {
                     var users = JSON.parse(userDetails.responseText);
                     DoubleGChat.ViewModels.Search.setUsers(users);

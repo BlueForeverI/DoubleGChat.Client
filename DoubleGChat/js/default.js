@@ -44,12 +44,12 @@
             }
 
             args.setPromise(WinJS.UI.processAll().then(function () {
-                //if (nav.location) {
-                //    nav.history.current.initialPlaceholder = true;
-                //    return nav.navigate(nav.location, nav.state);
-                //} else {
-                //    return nav.navigate(Application.navigator.home);
-                //}
+                if (nav.location) {
+                    nav.history.current.initialPlaceholder = true;
+                    return nav.navigate(nav.location, nav.state);
+                } else {
+                    return nav.navigate(Application.navigator.home);
+                }
             }));
         } else if (args.detail.kind === appModel.Activation.ActivationKind.search) {
             args.setPromise(ui.processAll().then(function () {
