@@ -5,7 +5,7 @@
     var user = DoubleGChat.Data.User.getUserCredentials();
 
     var getFriends = function () {
-        DoubleGChat.RemoteData.sendRequest(contactsUrl, "get", null, user.SessionKey)
+        DoubleGChat.RemoteData.sendRequest(contactsUrl, "get", null, user.sessionKey)
         .done(function (response) {
             var data = JSON.parse(response.response);
             data.forEach(function (item) {
