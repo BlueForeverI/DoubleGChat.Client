@@ -17,10 +17,12 @@
     <!-- DoubleGChat references -->
     <script src="js/user-controller.js"></script>
     <link href="/css/default.css" rel="stylesheet" />
+    <script src="js/default-code-behind.js"></script>
     <script src="/js/default.js"></script>
     <script src="/js/navigator.js"></script>
 </head>
 <body>
+    <button id="logout" onclick="DoubleGChat.CodeBehind.Default.logout(event)">logout</button>
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/login/login.html'}"></div>
     <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>

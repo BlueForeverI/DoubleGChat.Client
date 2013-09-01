@@ -61,6 +61,8 @@
     <Content Include="js\constants.js" />
     <Content Include="js\contacts-controller.js" />
     <Content Include="js\data-requester.js" />
+    <Content Include="js\data\user-data-layer.js" />
+    <Content Include="js\default-code-behind.js" />
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\search-controller.js" />
