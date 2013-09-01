@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    var selectUser = function (invokeEvent) {
+    var selectUser = function (event) {
         var appBarElement = document.getElementById("app-bar");
         var appBar = appBarElement.winControl;
         appBar.show();
@@ -11,7 +11,7 @@
         var listView = document.getElementById("search-results-list-view").winControl;
         listView.selection.getItems().then(function (items) {
             var currentUser = items[0].data;
-            DoubleGChat.Controllers.Contacts.sendContactRequest(currentUser.id);
+            DoubleGChat.Controllers.ContactsRequests.sendContactRequest(currentUser.id);
         });
     };
 

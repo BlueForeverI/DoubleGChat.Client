@@ -32,7 +32,10 @@
             progress();
             if (user) {
                 DoubleGChat.RemoteData.sendRequest(loginSessionUrl, "POST", user)
-                .done(success, error);
+                .done(success, function () {
+                    removeUserCredentials();
+                    error();
+                });
             } else {
                 error();
             }

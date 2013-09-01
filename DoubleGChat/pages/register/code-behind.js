@@ -19,7 +19,7 @@
             lastName: lastName.value,
             profilePictureUrl: profilePictureUrl
         });
-        
+
         DoubleGChat.Controllers.User.register(user)
         .done(function (userDetails) {
             WinJS.Navigation.navigate("/pages/contacts/contacts.html");
@@ -29,7 +29,7 @@
     var uploadImage = function (storageFile) {
         return new WinJS.Promise(function (success) {
             var file = MSApp.createFileFromStorageFile(storageFile);
-            
+
             if (!file || !file.type.match(/image.*/)) {
                 return;
             }
@@ -58,23 +58,25 @@
         var fromFileButton = document.getElementById("from-file-button");
         var fromCameraButton = document.getElementById("from-camera-button");
 
-        fromFileButton.addEventListener("click", function(ev) {
+        fromFileButton.addEventListener("click", function (ev) {
             var picker = Windows.Storage.Pickers.FileOpenPicker();
             picker.fileTypeFilter.push(".jpg");
             picker.fileTypeFilter.push(".png");
 
             picker.pickSingleFileAsync().then(function (storageFile) {
-                var container = document.getElementById("profile-image-container");
-                container.style.display = "inline";
-                container.setAttribute("src", "../../images/loading.gif");
-                
-                uploadImage(storageFile).then(function(url) {
-                    container.setAttribute("src", url);
-                });
+                if (storageFile) {
+                    var container = document.getElementById("profile-image-container");
+                    container.style.display = "inline";
+                    container.setAttribute("src", "../../images/loading.gif");
+
+                    uploadImage(storageFile).then(function (url) {
+                        container.setAttribute("src", url);
+                    });
+                }
             });
         });
 
-        fromCameraButton.addEventListener("click", function(ev) {
+        fromCameraButton.addEventListener("click", function (ev) {
             var captureUI = new Windows.Media.Capture.CameraCaptureUI();
             captureUI.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (capturedItem) {
                 if (capturedItem) {

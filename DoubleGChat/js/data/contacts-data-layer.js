@@ -2,11 +2,12 @@
     "use strict";
 
     var contactsUrl = DoubleGChat.Constants.baseUrl + "contacts/";
-    var user = DoubleGChat.Data.User.getUserCredentials();
 
     var getFriends = function () {
+        var allContactsUrl = contactsUrl + "all";
+        var user = DoubleGChat.Data.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
-            DoubleGChat.RemoteData.sendRequest(contactsUrl, "get", null, user.sessionKey)
+            DoubleGChat.RemoteData.sendRequest(allContactsUrl, "get", null, user.sessionKey)
             .done(function (response) {
                 var data = JSON.parse(response.response);
                 success(data);
@@ -19,6 +20,7 @@
 
     var getContactRequests = function () {
         var requestContactUrl = contactsUrl + "requests";
+        var user = DoubleGChat.Data.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(requestContactUrl, "get", null, user.sessionKey)
             .done(function (response) {
@@ -33,6 +35,7 @@
 
     var sendContactRequest = function (userId) {
         var sendContactUrl = contactsUrl + "add/" + userId;
+        var user = DoubleGChat.Data.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(sendContactUrl, "get", null, user.sessionKey)
             .done(success, function (response) {
@@ -44,6 +47,7 @@
 
     var acceptContactRequest = function (requestId) {
         var acceptContactUrl = contactsUrl + "accept/" + requestId;
+        var user = DoubleGChat.Data.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(acceptContactUrl, "get", null, user.sessionKey)
             .done(success, function (response) {
@@ -55,6 +59,7 @@
 
     var denyContactRequest = function (requestId) {
         var denyContactUrl = contactsUrl + "deny/" + requestId;
+        var user = DoubleGChat.Data.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(denyContactUrl, "get", null, user.sessionKey)
             .done(success, function (response) {
@@ -64,7 +69,7 @@
         });
     };
 
-    WinJS.Namespaces.define("DoubleGChat.Data.Contacts", {
+    WinJS.Namespace.define("DoubleGChat.Data.Contacts", {
         getFriends: getFriends,
         getContactRequests: getContactRequests,
         sendContactRequest: sendContactRequest,

@@ -19,7 +19,8 @@
         return DoubleGChat.Controllers.User.loginWIthCurrentUserSession()
             .then(function () {
                 return nav.navigate("/pages/contacts/contacts.html");
-            }, function () { });
+            }, function () {
+            });
     };
 
     app.addEventListener("activated", function (args) {
@@ -40,6 +41,7 @@
             }
 
             args.setPromise(WinJS.UI.processAll().then(function () {
+                WinJS.Binding.processAll(null, DoubleGChat.ViewModels.Global);
                 if (nav.location) {
                     nav.history.current.initialPlaceholder = true;
                     return nav.navigate(nav.location, nav.state);
@@ -49,6 +51,7 @@
             }));
         } else if (args.detail.kind === appModel.Activation.ActivationKind.search) {
             args.setPromise(ui.processAll().then(function () {
+                WinJS.Binding.processAll(null, DoubleGChat.ViewModels.Global);
                 if (!nav.location) {
                     nav.history.current = { location: Application.navigator.home, initialState: {} };
                 }

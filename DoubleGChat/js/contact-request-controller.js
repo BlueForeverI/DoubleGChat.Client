@@ -1,59 +1,74 @@
 ﻿(function () {
     "use strict";
 
-    var contactsUrl = DoubleGChat.Constants.baseUrl + "contacts/";
-    var user = DoubleGChat.Data.User.getUserCredentials();
-
     var getContactRequests = function () {
-        var requestContactUrl = contactsUrl + "requests";
-        DoubleGChat.RemoteData.sendRequest(requestContactUrl, "get", null, user.sessionKey)
-        .done(function (response) {
-            var data = JSON.parse(response.response);
-            data.forEach(function (item) {
-                DoubleGChat.ViewModels.Contacts.allContacts.push(item);
-            });
-        }, function (response) {
-            var data = JSON.parse(response.response);
-            console.log(data);
+        DoubleGChat.ViewModels.Global.contactRequests.dataSource.list
+            .splice(0, DoubleGChat.ViewModels.Global.contactRequests.dataSource.list.length);
+        return new WinJS.Promise(function (success, error, progress) {
+            DoubleGChat.Data.Contacts.getContactRequests()
+            .done(function (data) {
+                data.forEach(function (item) {
+                    DoubleGChat.ViewModels.Global.contactRequests.push(item);
+                });
+                success();
+            }, function (data) {
+                error(data);
+            }, progress);
         });
-    }
+    };
+
+    var getContactRequestsCount = function () {
+        return new WinJS.Promise(function (success, error, progress) {
+            DoubleGChat.Data.Contacts.getContactRequests()
+            .done(function (data) {
+                DoubleGChat.ViewModels.Global.contactRequestsCount.requestCount = data.length;
+            }, function (data) {
+                error(data);
+            }, progress);
+        });
+    };
 
     var sendContactRequest = function (userId) {
-        var sendContactUrl = contactsUrl + "add/" + userId;
-        DoubleGChat.RemoteData.sendRequest(sendContactUrl, "get", null, user.sessionKey)
-        .done(function (response) {
-            var data = JSON.parse(response.response);
-        }, function (response) {
-            var data = JSON.parse(response.response);
-            console.log(data);
+        return new WinJS.Promise(function (success, error, progress) {
+            DoubleGChat.Data.Contacts.sendContactRequest(userId)
+            .done(function () {
+
+            }, function (data) {
+                error(data);
+            }, progress);
         });
-    }
+    };
 
     var acceptContactRequest = function (requestId) {
-        var acceptContactUrl = contactsUrl + "accept/" + requestId;
-        DoubleGChat.RemoteData.sendRequest(acceptContactUrl, "get", null, user.sessionKey)
-        .done(function (response) {
-            var data = JSON.parse(response.response);
-            //TODO
-        }, function (response) {
-            var data = JSON.parse(response.response);
-            console.log(data);
+        return new WinJS.Promise(function (success, error, progress) {
+            DoubleGChat.Data.Contacts.acceptContactRequest(requestId)
+            .then(success, function (data) {
+                error(data);
+            }, progress);
         });
-    }
+    };
 
     var denyContactRequest = function (requestId) {
-        var denyContactUrl = contactsUrl + "deny/" + requestId;
-        DoubleGChat.RemoteData.sendRequest(denyContactUrl, "get", null, user.sessionKey)
-        .done(function (response) {
-            var data = JSON.parse(response.response);
-            //TODO
-        }, function (response) {
-            var data = JSON.parse(response.response);
-            console.log(data);
-        });
-    }
+        return new WinJS.Promise(function (success, error, progress) {
+            DoubleGChat.Data.Contacts.acceptContactRequest(requestId)
+            .done(function () {
 
-    WinJS.Namespace.define("DoubleGChat.Controllers.Contacts", {
-        sendContactRequest: sendContactRequest
+            }, function (data) {
+                error(data);
+            }, progress);
+        });
+    };
+
+    setInterval(function () {
+        if (DoubleGChat.Data.User.getUserCredentials()) {
+            getContactRequestsCount();
+        }
+    }, 1000);
+
+    WinJS.Namespace.define("DoubleGChat.Controllers.ContactsRequests", {
+        sendContactRequest: sendContactRequest,
+        acceptContactRequest: acceptContactRequest,
+        denyContactRequest: denyContactRequest,
+        getContactRequests: getContactRequests
     });
 })();
