@@ -1,7 +1,4 @@
-﻿/// <reference path="../../js/sha1.js" />
-// For an introduction to the Page Control template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkId=232511
-(function () {
+﻿(function () {
     "use strict";
 
     var registerHandler = function (event) {

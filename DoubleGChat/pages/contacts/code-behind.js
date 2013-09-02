@@ -4,7 +4,7 @@
     var openConversation = function (invokeEvent) {
         invokeEvent.detail.itemPromise.then(function (contact) {
             WinJS.Navigation.navigate("/pages/conversation/conversation.html", {
-                userId: contact.data.id
+                username: contact.data.username
             });
         });
     }

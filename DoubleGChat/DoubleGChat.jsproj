@@ -62,8 +62,11 @@
     <Content Include="js\constants.js" />
     <Content Include="js\contact-request-controller.js" />
     <Content Include="js\contacts-controller.js" />
+    <Content Include="js\conversation-controller.js" />
     <Content Include="js\data-requester.js" />
     <Content Include="js\data\contacts-data-layer.js" />
+    <Content Include="js\data\conversation-data-layer.js" />
+    <Content Include="js\data\search-data-layer.js" />
     <Content Include="js\data\user-data-layer.js" />
     <Content Include="js\default-code-behind.js" />
     <Content Include="js\default.js" />
@@ -85,6 +88,7 @@
     <Content Include="pages\contacts\contacts.css" />
     <Content Include="pages\contacts\contacts.html" />
     <Content Include="pages\contacts\contacts.js" />
+    <Content Include="pages\conversation\code-behind.js" />
     <Content Include="pages\conversation\conversation.css" />
     <Content Include="pages\conversation\conversation.html" />
     <Content Include="pages\conversation\conversation.js" />
