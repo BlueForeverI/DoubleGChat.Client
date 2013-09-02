@@ -34,11 +34,13 @@
 
                 var editUrl = DoubleGChat.Constants.baseUrl + "users/edit";
                 DoubleGChat.RemoteData.sendRequest(editUrl, "post", editUserObject, userInfo.sessionKey)
-                    .done(function (success) {
-                        var x = 0;
+                    .done(function (userDetails) {
+                        var user = JSON.parse(userDetails.responseText);
+                        DoubleGChat.Data.User.saveUserCredentials(user);
+                        DoubleGChat.Notifications.show("User details saved successfuly!");
                     }, function (error) {
-                        var y = 0;
-                    });
+                        DoubleGChat.Notifications.show(error);
+                });
             });
         },
 

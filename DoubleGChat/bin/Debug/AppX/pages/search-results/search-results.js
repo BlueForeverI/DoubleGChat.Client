@@ -5,11 +5,9 @@
         init: function (element, options) {
             DoubleGChat.Controllers.Search.getUsersByQueryText(options.queryText);
         },
-        // This function is called whenever a user navigates to this page. It
-        // populates the page elements with the app's data.
+
         ready: function (element, options) {
-            console.log(1);
-            // TODO: Initialize the page here.
+            WinJS.Binding.processAll(element, DoubleGChat.ViewModels.Search);
         },
 
         unload: function () {

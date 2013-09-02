@@ -14,27 +14,33 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <label for="first-name">First Name</label>
-            <input id="first-name" type="text" name="first-name" value="" placeholder="first name" />
-            <label for="last-name">Last Name</label>
-            <input id="last-name" type="text" name="last-name" value="" placeholder="last name" />
-            <label for="username">Username</label>
-            <input id="username" type="text" name="username" value="" placeholder="username" />
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" value="" placeholder="password" />
-            <button id="add-picture-button"
-                onclick="DoubleGChat.CodeBehind.UserRegister.addPicture(event)">
-                Add Profile Picture
-            </button>
-            <div id="picture-menu-container">
-                <div id="picture-menu-id" data-win-control="WinJS.UI.Menu" data-win-options="{anchor:'add-picture-button'}">
-                    <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'from-file-button',label:'From File'}"></button>
-                    <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'from-camera-button',label:'From Camera'}"></button>
+            <div id="registration-form">
+                <label for="first-name">First Name</label>
+                <input id="first-name" type="text" name="first-name" value="" placeholder="first name" />
+                <label for="last-name">Last Name</label>
+                <input id="last-name" type="text" name="last-name" value="" placeholder="last name" />
+                <label for="username">Username</label>
+                <input id="username" type="text" name="username" value="" placeholder="username" />
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" value="" placeholder="password" />
+                <button id="add-picture-button"
+                        onclick="DoubleGChat.CodeBehind.UserRegister.addPicture(event)">
+                    Add Profile Picture
+                </button>
+                <div id="picture-menu-container">
+                    <div id="picture-menu-id" data-win-control="WinJS.UI.Menu" data-win-options="{anchor:'add-picture-button'}">
+                        <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'from-file-button',label:'From File'}"></button>
+                        <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'from-camera-button',label:'From Camera'}"></button>
+                    </div>
                 </div>
+                
+                <button id="register" onclick="DoubleGChat.CodeBehind.UserRegister.register(event)">Register</button>
+                
             </div>
-            <img id="profile-image-container" src="#" />
-            <button id="register" onclick="DoubleGChat.CodeBehind.UserRegister.register(event)">register</button>
-            <span data-win-bind="innerText: errorMessage"></span>
+            <div id="information-form">
+                <img id="profile-image-container" src="#" />
+                <span data-win-bind="innerText: errorMessage"></span>
+            </div>
         </section>
     </div>
 </body>

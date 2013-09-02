@@ -82,6 +82,9 @@
     <Content Include="js\view-models\global-view-model.js" />
     <Content Include="js\view-models\search-view-model.js" />
     <Content Include="js\view-models\user-view-model.js" />
+    <Content Include="pages\change-profile-picture\change-profile-picture.css" />
+    <Content Include="pages\change-profile-picture\change-profile-picture.html" />
+    <Content Include="pages\change-profile-picture\change-profile-picture.js" />
     <Content Include="pages\contact-requests\code-behind.js" />
     <Content Include="pages\contact-requests\contact-requests.css" />
     <Content Include="pages\contact-requests\contact-requests.html" />

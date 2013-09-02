@@ -5,21 +5,67 @@
     <title>DoubleGChat</title>
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
+    <link href="/css/default.css" rel="stylesheet" />
+    
+    <!-- Common Scripts -->
+    <script src="js/user-model.js"></script>
     <script src="js/sha1.js"></script>
     <script src="js/constants.js"></script>
-    <script src="js/user-model.js"></script>
     <script src="js/data-requester.js"></script>
+    <script src="js/pubnub.js"></script>
+    <script src="js/notifications.js"></script>
+    
+    <!-- View-Models Scripts -->
+    <script src="js/view-models/user-view-model.js"></script>
+    <script src="js/view-models/contacts-view-model.js"></script>
+    <script src="js/view-models/search-view-model.js"></script>
+    <script src="js/view-models/global-view-model.js"></script>
+    <script src="js/view-models/conversation-view-model.js"></script>
+    
+    <!-- Data Layers Scripts -->
+    <script src="js/data/contacts-data-layer.js"></script>
+    <script src="js/data/search-data-layer.js"></script>
+    <script src="js/data/user-data-layer.js"></script>
+    <script src="js/data/conversation-data-layer.js"></script>
+    
+    <!-- Controllers Scripts -->
+    <script src="js/controllers/contact-request-controller.js"></script>
+    <script src="js/controllers/contacts-controller.js"></script>
+    <script src="js/controllers/user-controller.js"></script>
+    <script src="js/controllers/conversation-controller.js"></script>
+    <script src="js/controllers/search-controller.js"></script>
 
-    <!-- DoubleGChat references -->
-    <link href="/css/default.css" rel="stylesheet" />
+    <!-- Page Scripts -->
+    <script src="pages/contact-requests/contact-requests.js"></script>
+    <script src="pages/contact-requests/code-behind.js"></script>
+    <script src="pages/contacts/contacts.js"></script>
+    <script src="pages/contacts/code-behind.js"></script>
+    <script src="pages/conversation/code-behind.js"></script>
+    <script src="pages/conversation/conversation.js"></script>
+    <script src="pages/login/login.js"></script>
+    <script src="pages/login/code-behind.js"></script>
+    <script src="pages/missed-conversations/missed-conversations.js"></script>
+    <script src="pages/missed-conversations/code-behind.js"></script>
+    <script src="pages/register/code-behind.js"></script>
+    <script src="pages/register/register.js"></script>
+    <script src="pages/search-results/code-behind.js"></script>
+    <script src="pages/search-results/search-results.js"></script>
+
+    <script src="js/default-code-behind.js"></script>
     <script src="/js/default.js"></script>
     <script src="/js/navigator.js"></script>
 </head>
 <body>
+    <button onclick="DoubleGChat.CodeBehind.Default.logout(event)">logout</button>
+    <button onclick="DoubleGChat.CodeBehind.Default.goToRegister(event)">Register</button>
+
+    <button onclick="DoubleGChat.CodeBehind.Default.navigateToContactRequests(event)" data-win-bind="innerText: contactRequestsCount.requestCount"></button>
+    <button onclick="DoubleGChat.CodeBehind.Default.navigateToConversations()" data-win-bind="innerText: missedConversations.count"></button>
+
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/login/login.html'}"></div>
     <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>

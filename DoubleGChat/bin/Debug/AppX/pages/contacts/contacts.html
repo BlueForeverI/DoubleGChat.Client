@@ -4,17 +4,7 @@
     <meta charset="utf-8" />
     <title>contacts</title>
 
-    <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
-    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
-    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
-
     <link href="contacts.css" rel="stylesheet" />
-    <script src="../../js/view-models/contacts-view-model.js"></script>
-    <script src="../../js/user-controller.js"></script>
-    <script src="../../js/contacts-controller.js"></script>
-    <script src="code-behind.js"></script>
-    <script src="contacts.js"></script>
 </head>
 <body>
     <div id="user-template-container" data-win-control="WinJS.Binding.Template">
@@ -23,6 +13,7 @@
             <h3 data-win-bind="innerText: username"></h3>
             <h4 data-win-bind="innerText: firstName"></h4>
             <h4 data-win-bind="innerText: lastName"></h4>
+            <div class="user-status" data-win-bind="style.backgroundColor: online DoubleGChat.ViewModels.Contacts.userStatusToColor"></div>
         </div>
     </div>
 
@@ -40,7 +31,8 @@
                     itemTemplate: select('#user-template-container'),
                     itemDataSource: DoubleGChat.ViewModels.Contacts.allContacts.dataSource,
                     oniteminvoked: DoubleGChat.CodeBehind.Contacts.goToConversationPage,
-                    selectionMode: 'none'
+                    selectionMode: 'none',
+                    layout: { type: WinJS.UI.GridLayout }
                     }">
             </div>
         </section>

@@ -115,6 +115,7 @@
         register: register,
         getUserCredentials: getUserCredentials,
         loginWithCurrentSession: loginWithCurrentSession,
-        goOffline: goOffline
+        goOffline: goOffline,
+        saveUserCredentials: saveUserCredentials
     });
 })();

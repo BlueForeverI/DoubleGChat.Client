@@ -5,199 +5,284 @@
     <WindowsUser>George</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>C77786B5AA3320997171D11F9B963FD261AADC2F562DD2E4A06DD335B01390E8</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>BC7904B2B50830AA6670F19C7B52018B63AE525219EC1EBADD5620E3526A6053</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>a0b3455d-c06e-44f2-9097-6fd554447f59_1.0.0.0_neutral__npysjcx1rdjd6</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>a0b3455d-c06e-44f2-9097-6fd554447f59_npysjcx1rdjd6!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>a0b3455d-c06e-44f2-9097-6fd554447f59</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Georgi</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-08-31T20:44:04.825</Modified>
+      <Modified>2013-09-02T22:38:49.281</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2013-08-31T08:31:30.378</Modified>
+      <Modified>2013-09-02T21:57:21.880</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\change-profile-picture\change-profile-picture.css">
+      <PackagePath>pages\change-profile-picture\change-profile-picture.css</PackagePath>
+      <Modified>2013-09-02T22:42:42.598</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\contact-requests\contact-requests.css">
+      <PackagePath>pages\contact-requests\contact-requests.css</PackagePath>
+      <Modified>2013-09-02T21:57:22.027</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\contacts\contacts.css">
       <PackagePath>pages\contacts\contacts.css</PackagePath>
-      <Modified>2013-08-31T08:31:30.435</Modified>
+      <Modified>2013-09-02T21:57:22.047</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\conversation\conversation.css">
       <PackagePath>pages\conversation\conversation.css</PackagePath>
-      <Modified>2013-08-31T08:31:30.440</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\home\home.css">
-      <PackagePath>pages\home\home.css</PackagePath>
-      <Modified>2013-08-31T08:31:30.448</Modified>
+      <Modified>2013-09-02T21:57:22.057</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\login\login.css">
       <PackagePath>pages\login\login.css</PackagePath>
-      <Modified>2013-08-31T08:31:30.457</Modified>
+      <Modified>2013-09-02T21:57:22.072</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\missed-conversations\missed-conversations.css">
+      <PackagePath>pages\missed-conversations\missed-conversations.css</PackagePath>
+      <Modified>2013-09-02T21:57:22.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\profile-settings\profile-settings.css">
+      <PackagePath>pages\profile-settings\profile-settings.css</PackagePath>
+      <Modified>2013-09-02T21:57:22.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\register\register.css">
       <PackagePath>pages\register\register.css</PackagePath>
-      <Modified>2013-08-31T08:31:30.463</Modified>
+      <Modified>2013-09-02T22:34:20.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\search-results\search-results.css">
       <PackagePath>pages\search-results\search-results.css</PackagePath>
-      <Modified>2013-08-31T08:31:30.470</Modified>
+      <Modified>2013-09-02T21:57:22.126</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\user-profile\user-profile.css">
-      <PackagePath>pages\user-profile\user-profile.css</PackagePath>
-      <Modified>2013-08-31T08:31:30.475</Modified>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\loading.gif">
+      <PackagePath>images\loading.gif</PackagePath>
+      <Modified>2013-09-02T21:57:21.888</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-08-31T08:31:30.382</Modified>
+      <Modified>2013-09-02T21:57:21.891</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\smalllogo.png">
       <PackagePath>images\smalllogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-08-31T08:31:30.384</Modified>
+      <Modified>2013-09-02T21:57:21.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\splashscreen.png">
       <PackagePath>images\splashscreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-08-31T08:31:30.385</Modified>
+      <Modified>2013-09-02T21:57:21.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\storelogo.png">
       <PackagePath>images\storelogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-08-31T08:31:30.387</Modified>
+      <Modified>2013-09-02T21:57:21.901</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\constants.js">
       <PackagePath>js\constants.js</PackagePath>
-      <Modified>2013-08-31T08:31:30.389</Modified>
+      <Modified>2013-09-02T21:57:21.902</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\contacts-controller.js">
-      <PackagePath>js\contacts-controller.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.848</Modified>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\controllers\contact-request-controller.js">
+      <PackagePath>js\controllers\contact-request-controller.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.904</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\controllers\contacts-controller.js">
+      <PackagePath>js\controllers\contacts-controller.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.910</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\controllers\conversation-controller.js">
+      <PackagePath>js\controllers\conversation-controller.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\controllers\search-controller.js">
+      <PackagePath>js\controllers\search-controller.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.923</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\controllers\user-controller.js">
+      <PackagePath>js\controllers\user-controller.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\data-requester.js">
       <PackagePath>js\data-requester.js</PackagePath>
-      <Modified>2013-08-31T08:31:30.390</Modified>
+      <Modified>2013-09-02T21:57:21.929</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\data\contacts-data-layer.js">
+      <PackagePath>js\data\contacts-data-layer.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.932</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\data\conversation-data-layer.js">
+      <PackagePath>js\data\conversation-data-layer.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.935</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\data\search-data-layer.js">
+      <PackagePath>js\data\search-data-layer.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.937</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\data\user-data-layer.js">
+      <PackagePath>js\data\user-data-layer.js</PackagePath>
+      <Modified>2013-09-02T22:11:04.732</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\default-code-behind.js">
+      <PackagePath>js\default-code-behind.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.850</Modified>
+      <Modified>2013-09-02T22:38:02.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\navigator.js">
       <PackagePath>js\navigator.js</PackagePath>
-      <Modified>2013-08-31T08:31:30.426</Modified>
+      <Modified>2013-09-02T21:57:21.950</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\search-controller.js">
-      <PackagePath>js\search-controller.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.850</Modified>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\notifications.js">
+      <PackagePath>js\notifications.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.959</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\pubnub.js">
+      <PackagePath>js\pubnub.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.976</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\sha1.js">
       <PackagePath>js\sha1.js</PackagePath>
-      <Modified>2013-08-31T08:35:50.629</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\user-controller.js">
-      <PackagePath>js\user-controller.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.852</Modified>
+      <Modified>2013-09-02T21:57:21.979</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\user-model.js">
       <PackagePath>js\user-model.js</PackagePath>
-      <Modified>2013-08-31T08:31:30.429</Modified>
+      <Modified>2013-09-02T21:57:21.982</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\view-models\contacts-view-model.js">
       <PackagePath>js\view-models\contacts-view-model.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.854</Modified>
+      <Modified>2013-09-02T21:57:21.986</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\view-models\conversation-view-model.js">
+      <PackagePath>js\view-models\conversation-view-model.js</PackagePath>
+      <Modified>2013-09-02T21:57:21.991</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\view-models\global-view-model.js">
+      <PackagePath>js\view-models\global-view-model.js</PackagePath>
+      <Modified>2013-09-02T21:57:22.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\view-models\search-view-model.js">
       <PackagePath>js\view-models\search-view-model.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.856</Modified>
+      <Modified>2013-09-02T21:57:22.020</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\view-models\user-view-model.js">
       <PackagePath>js\view-models\user-view-model.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.879</Modified>
+      <Modified>2013-09-02T21:57:22.021</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\change-profile-picture\change-profile-picture.js">
+      <PackagePath>pages\change-profile-picture\change-profile-picture.js</PackagePath>
+      <Modified>2013-09-02T22:41:52.546</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\contact-requests\code-behind.js">
+      <PackagePath>pages\contact-requests\code-behind.js</PackagePath>
+      <Modified>2013-09-02T21:57:22.026</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\contact-requests\contact-requests.js">
+      <PackagePath>pages\contact-requests\contact-requests.js</PackagePath>
+      <Modified>2013-09-02T21:57:22.040</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\contacts\code-behind.js">
       <PackagePath>pages\contacts\code-behind.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.881</Modified>
+      <Modified>2013-09-02T21:57:22.043</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\contacts\contacts.js">
       <PackagePath>pages\contacts\contacts.js</PackagePath>
-      <Modified>2013-08-31T08:31:30.438</Modified>
+      <Modified>2013-09-02T21:57:22.054</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\conversation\code-behind.js">
+      <PackagePath>pages\conversation\code-behind.js</PackagePath>
+      <Modified>2013-09-02T21:57:22.056</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\conversation\conversation.js">
       <PackagePath>pages\conversation\conversation.js</PackagePath>
-      <Modified>2013-08-31T08:31:30.446</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\home\home.js">
-      <PackagePath>pages\home\home.js</PackagePath>
-      <Modified>2013-08-31T08:31:30.452</Modified>
+      <Modified>2013-09-02T21:57:22.061</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\login\code-behind.js">
       <PackagePath>pages\login\code-behind.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.886</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\login\login-view-model.js">
-      <PackagePath>pages\login\login-view-model.js</PackagePath>
-      <Modified>2013-08-31T08:31:30.456</Modified>
+      <Modified>2013-09-02T21:57:22.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\login\login.js">
       <PackagePath>pages\login\login.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.891</Modified>
+      <Modified>2013-09-02T21:57:22.078</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\missed-conversations\code-behind.js">
+      <PackagePath>pages\missed-conversations\code-behind.js</PackagePath>
+      <Modified>2013-09-02T21:57:22.087</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\missed-conversations\missed-conversations.js">
+      <PackagePath>pages\missed-conversations\missed-conversations.js</PackagePath>
+      <Modified>2013-09-02T21:57:22.099</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\profile-settings\profile-settings.js">
+      <PackagePath>pages\profile-settings\profile-settings.js</PackagePath>
+      <Modified>2013-09-02T22:29:37.149</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\register\code-behind.js">
       <PackagePath>pages\register\code-behind.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.893</Modified>
+      <Modified>2013-09-02T21:57:22.117</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\register\register.js">
       <PackagePath>pages\register\register.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.896</Modified>
+      <Modified>2013-09-02T21:57:22.120</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\search-results\code-behind.js">
       <PackagePath>pages\search-results\code-behind.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.897</Modified>
+      <Modified>2013-09-02T21:57:22.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\search-results\search-results.js">
       <PackagePath>pages\search-results\search-results.js</PackagePath>
-      <Modified>2013-08-31T20:44:04.901</Modified>
+      <Modified>2013-09-02T21:57:22.142</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\user-profile\user-profile.js">
-      <PackagePath>pages\user-profile\user-profile.js</PackagePath>
-      <Modified>2013-08-31T08:31:30.522</Modified>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\change-profile-picture\change-profile-picture.html">
+      <PackagePath>pages\change-profile-picture\change-profile-picture.html</PackagePath>
+      <Modified>2013-09-02T22:39:46.278</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\contact-requests\contact-requests.html">
+      <PackagePath>pages\contact-requests\contact-requests.html</PackagePath>
+      <Modified>2013-09-02T21:57:22.031</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\contacts\contacts.html">
       <PackagePath>pages\contacts\contacts.html</PackagePath>
-      <Modified>2013-08-31T20:44:04.884</Modified>
+      <Modified>2013-09-02T21:57:22.049</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\conversation\conversation.html">
       <PackagePath>pages\conversation\conversation.html</PackagePath>
-      <Modified>2013-08-31T08:31:30.442</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\home\home.html">
-      <PackagePath>pages\home\home.html</PackagePath>
-      <Modified>2013-08-31T08:31:30.450</Modified>
+      <Modified>2013-09-02T21:57:22.060</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2013-08-31T20:44:04.845</Modified>
+      <Modified>2013-09-02T21:57:21.883</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\login\login.html">
       <PackagePath>pages\login\login.html</PackagePath>
-      <Modified>2013-08-31T20:44:04.889</Modified>
+      <Modified>2013-09-02T21:57:22.074</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\missed-conversations\missed-conversations.html">
+      <PackagePath>pages\missed-conversations\missed-conversations.html</PackagePath>
+      <Modified>2013-09-02T21:57:22.095</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\profile-settings\profile-settings.html">
+      <PackagePath>pages\profile-settings\profile-settings.html</PackagePath>
+      <Modified>2013-09-02T22:21:43.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\register\register.html">
       <PackagePath>pages\register\register.html</PackagePath>
-      <Modified>2013-08-31T20:44:04.894</Modified>
+      <Modified>2013-09-02T22:35:38.835</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\search-results\search-results.html">
       <PackagePath>pages\search-results\search-results.html</PackagePath>
-      <Modified>2013-08-31T20:44:04.900</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\user-profile\user-profile.html">
-      <PackagePath>pages\user-profile\user-profile.html</PackagePath>
-      <Modified>2013-08-31T08:31:30.477</Modified>
+      <Modified>2013-09-02T21:57:22.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-08-31T20:45:24.579</Modified>
+      <Modified>2013-09-02T22:38:49.130</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

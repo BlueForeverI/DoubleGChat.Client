@@ -62,7 +62,10 @@
 
         WinJS.Application.onsettings = function (e) {
             e.detail.applicationcommands =
-                { "profile-settings": { title: "Profile Settings", href: "/pages/profile-settings/profile-settings.html" } };
+                {
+                    "profile-settings": { title: "Profile Settings", href: "/pages/profile-settings/profile-settings.html" },
+                    "change-profile-picture": { title: "Change Profile Picture", href: "/pages/change-profile-picture/change-profile-picture.html" }
+                };
 
             WinJS.UI.SettingsFlyout.populateSettings(e);
         };

@@ -7,10 +7,26 @@ input {
     display: block;
 }
 
+#register {
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+}
+
 #profile-image-container {
     display: none;
-    width: 50px;
-    height: 50px;
+    width: 250px;
+    height: 250px;
+}
+
+#registration-form {
+    display: inline;
+    float: left;
+}
+
+#information-form {
+    display: inline;
+    float: left;
 }
 
 @media screen and (-ms-view-state: snapped) {

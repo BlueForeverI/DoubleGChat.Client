@@ -4,6 +4,9 @@
     "use strict";
 
     WinJS.UI.Pages.define("/pages/contacts/contacts.html", {
+        init: function(element, options) {
+            DoubleGChat.Controllers.Contacts.getFriends();
+        },
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
@@ -11,6 +14,7 @@
         },
 
         unload: function () {
+            DoubleGChat.Controllers.Contacts.clearFriendList();
             // TODO: Respond to navigations away from this page.
         },
 
