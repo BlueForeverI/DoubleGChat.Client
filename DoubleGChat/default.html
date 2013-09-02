@@ -9,23 +9,52 @@
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
+    <link href="/css/default.css" rel="stylesheet" />
+    
+    <!-- Common Scripts -->
+    <script src="js/user-model.js"></script>
     <script src="js/sha1.js"></script>
     <script src="js/constants.js"></script>
-    <script src="js/user-model.js"></script>
     <script src="js/data-requester.js"></script>
-
-    <!-- DoubleGChat references -->
     <script src="js/pubnub.js"></script>
     <script src="js/notifications.js"></script>
-    <script src="js/data/conversation-data-layer.js"></script>
-    <script src="js/view-models/conversation-view-model.js"></script>
+    
+    <!-- View-Models Scripts -->
+    <script src="js/view-models/user-view-model.js"></script>
+    <script src="js/view-models/contacts-view-model.js"></script>
+    <script src="js/view-models/search-view-model.js"></script>
     <script src="js/view-models/global-view-model.js"></script>
-    <script src="js/data/user-data-layer.js"></script>
+    <script src="js/view-models/conversation-view-model.js"></script>
+    
+    <!-- Data Layers Scripts -->
     <script src="js/data/contacts-data-layer.js"></script>
-    <script src="js/conversation-controller.js"></script>
-    <script src="js/user-controller.js"></script>
-    <script src="js/contact-request-controller.js"></script>
-    <link href="/css/default.css" rel="stylesheet" />
+    <script src="js/data/search-data-layer.js"></script>
+    <script src="js/data/user-data-layer.js"></script>
+    <script src="js/data/conversation-data-layer.js"></script>
+    
+    <!-- Controllers Scripts -->
+    <script src="js/controllers/contact-request-controller.js"></script>
+    <script src="js/controllers/contacts-controller.js"></script>
+    <script src="js/controllers/user-controller.js"></script>
+    <script src="js/controllers/conversation-controller.js"></script>
+    <script src="js/controllers/search-controller.js"></script>
+
+    <!-- Page Scripts -->
+    <script src="pages/contact-requests/contact-requests.js"></script>
+    <script src="pages/contact-requests/code-behind.js"></script>
+    <script src="pages/contacts/contacts.js"></script>
+    <script src="pages/contacts/code-behind.js"></script>
+    <script src="pages/conversation/code-behind.js"></script>
+    <script src="pages/conversation/conversation.js"></script>
+    <script src="pages/login/login.js"></script>
+    <script src="pages/login/code-behind.js"></script>
+    <script src="pages/missed-conversations/missed-conversations.js"></script>
+    <script src="pages/missed-conversations/code-behind.js"></script>
+    <script src="pages/register/code-behind.js"></script>
+    <script src="pages/register/register.js"></script>
+    <script src="pages/search-results/code-behind.js"></script>
+    <script src="pages/search-results/search-results.js"></script>
+
     <script src="js/default-code-behind.js"></script>
     <script src="/js/default.js"></script>
     <script src="/js/navigator.js"></script>
