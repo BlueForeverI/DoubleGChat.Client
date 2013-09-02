@@ -94,9 +94,6 @@
     <Content Include="pages\conversation\conversation.css" />
     <Content Include="pages\conversation\conversation.html" />
     <Content Include="pages\conversation\conversation.js" />
-    <Content Include="pages\home\home.css" />
-    <Content Include="pages\home\home.html" />
-    <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
     <Content Include="pages\login\code-behind.js" />
     <Content Include="pages\login\login-view-model.js" />

@@ -1,4 +1,8 @@
-﻿.conversation section[role=main] {
+﻿.win-listview {
+    height: 500px;
+}
+
+.conversation section[role=main] {
     margin-left: 120px;
     margin-right: 120px;
 }
@@ -9,7 +13,6 @@
 }
 
 #messages-list-view {
-    height: 100px;
 }
 
 @media screen and (-ms-view-state: snapped) {

@@ -41,7 +41,8 @@
                     itemTemplate: select('#user-template-container'),
                     itemDataSource: DoubleGChat.ViewModels.Contacts.allContacts.dataSource,
                     oniteminvoked: DoubleGChat.CodeBehind.Contacts.goToConversationPage,
-                    selectionMode: 'none'
+                    selectionMode: 'none',
+                    layout: { type: WinJS.UI.GridLayout }
                     }">
             </div>
         </section>

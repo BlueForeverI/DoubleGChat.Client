@@ -5,7 +5,7 @@
     <title>conversation</title>
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
@@ -43,7 +43,8 @@
                 <div id="messages-list-view" data-win-control="WinJS.UI.ListView"
                      data-win-options="{
 	                    itemTemplate: select('#message-template'),
-                        itemDataSource: DoubleGChat.ViewModels.Conversation.messages.dataSource
+                        itemDataSource: DoubleGChat.ViewModels.Conversation.messages.dataSource,
+                        layout: { type: WinJS.UI.ListLayout }
                      }">
                     
                 </div>
