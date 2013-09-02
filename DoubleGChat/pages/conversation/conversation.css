@@ -89,12 +89,20 @@
     display: block;
 }
 
-.partner dd {
+.user dd {
     background: #FF8519;
 }
 
-.user dd {
+.partner dd {
     background: #15D6FF;
+}
+
+.date {
+    color: green;
+}
+
+.username {
+    color: #A60000;
 }
 
 .message-container {

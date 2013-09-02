@@ -49,6 +49,11 @@
         missedConversations.dataSource.list.splice(0, count);
     };
 
+    var dateFormatter = WinJS.Binding.converter(function (dateString) {
+        var date = new Date(dateString);
+        return date.toLocaleTimeString();
+    });
+
     WinJS.Namespace.define("DoubleGChat.ViewModels.Conversation", {
         currentConversation: currentConversation,
         partner: partner,
@@ -59,6 +64,7 @@
         clearMessagesList: clearMessagesList,
         missedConversations: missedConversations,
         setMissedConversations: setMissedConversations,
-        clearMissedConversations: clearMissedConversations
+        clearMissedConversations: clearMissedConversations,
+        dateFormatter: dateFormatter
     });
 })();

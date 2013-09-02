@@ -20,7 +20,10 @@
                         <dd>
                             <div data-win-bind="innerText: content"></div>
                         </dd>
-                        <dt data-win-bind="innerText: sender.username"></dt>
+                        <dt>
+                            <span class="username" data-win-bind="innerText: sender.username"></span>
+                            <span class="date" data-win-bind="innerText: date DoubleGChat.ViewModels.Conversation.dateFormatter"></span>
+                        </dt>
                     </dl>
                 </div>
             </div>
