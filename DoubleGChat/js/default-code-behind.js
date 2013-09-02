@@ -16,9 +16,15 @@
         WinJS.Navigation.navigate("/pages/contact-requests/contact-requests.html");
     };
 
+
+    var navigateToConversations = function () {
+        WinJS.Navigation.navigate("/pages/missed-conversations/missed-conversations.html");
+    };
+
     WinJS.Namespace.define("DoubleGChat.CodeBehind.Default", {
         logout: logoutHandler,
         goToRegister: goToRegister,
-        navigateToContactRequests: navigateToContactRequests
+        navigateToContactRequests: navigateToContactRequests,
+        navigateToConversations: navigateToConversations
     });
 })();

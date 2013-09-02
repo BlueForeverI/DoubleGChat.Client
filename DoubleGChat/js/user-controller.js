@@ -21,9 +21,17 @@
         });
     };
 
+    var clearNavigationHistory = function () {
+        var historyStack = WinJS.Navigation.history.backStack;
+        while (historyStack.length > 0) {
+            historyStack.pop();
+        }
+    };
+
     var logout = function () {
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.Notifications.emptyChannelList();
+            clearNavigationHistory();
             DoubleGChat.Data.User.logout()
             .then(success, function (text) {
                 DoubleGChat.ViewModels.User.errorMessage = text;

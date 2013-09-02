@@ -23,7 +23,7 @@
             .done(function (data) {
                 globalViewModel.setContactRequestsCount(data.length);
             }, function (data) {
-                error(data);
+                console.log(data);
             });
         });
     };

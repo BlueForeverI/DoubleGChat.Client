@@ -100,6 +100,10 @@
     <Content Include="pages\login\login.css" />
     <Content Include="pages\login\login.html" />
     <Content Include="pages\login\login.js" />
+    <Content Include="pages\missed-conversations\code-behind.js" />
+    <Content Include="pages\missed-conversations\missed-conversations.css" />
+    <Content Include="pages\missed-conversations\missed-conversations.html" />
+    <Content Include="pages\missed-conversations\missed-conversations.js" />
     <Content Include="pages\profile-settings\profile-settings.css" />
     <Content Include="pages\profile-settings\profile-settings.html" />
     <Content Include="pages\profile-settings\profile-settings.js" />

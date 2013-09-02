@@ -17,9 +17,12 @@
     <!-- DoubleGChat references -->
     <script src="js/pubnub.js"></script>
     <script src="js/notifications.js"></script>
+    <script src="js/data/conversation-data-layer.js"></script>
+    <script src="js/view-models/conversation-view-model.js"></script>
     <script src="js/view-models/global-view-model.js"></script>
     <script src="js/data/user-data-layer.js"></script>
     <script src="js/data/contacts-data-layer.js"></script>
+    <script src="js/conversation-controller.js"></script>
     <script src="js/user-controller.js"></script>
     <script src="js/contact-request-controller.js"></script>
     <link href="/css/default.css" rel="stylesheet" />
@@ -32,6 +35,7 @@
     <button onclick="DoubleGChat.CodeBehind.Default.goToRegister(event)">Register</button>
 
     <button onclick="DoubleGChat.CodeBehind.Default.navigateToContactRequests(event)" data-win-bind="innerText: contactRequestsCount.requestCount"></button>
+    <button onclick="DoubleGChat.CodeBehind.Default.navigateToConversations()" data-win-bind="innerText: missedConversations.count"></button>
 
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/login/login.html'}"></div>
     <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">

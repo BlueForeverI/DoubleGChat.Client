@@ -5,6 +5,7 @@
     var contactRequests = new WinJS.Binding.List([]);
     var newConversations = new WinJS.Binding.List([]);
     var contactRequestsCount = WinJS.Binding.as(requestCount);
+    var missedConversations = WinJS.Binding.as({ count: 0 });
 
     var setContactRequests = function (requests) {
         requests.forEach(function (request) {
@@ -21,12 +22,18 @@
         contactRequestsCount.requestCount = count;
     }
     
+    var setMissedConversationsCount = function (count) {
+        missedConversations.count = count;
+    };
+
     WinJS.Namespace.define("DoubleGChat.ViewModels.Global", {
         contactRequests: contactRequests,
         newConversations: newConversations,
         contactRequestsCount: contactRequestsCount,
         setContactRequests: setContactRequests,
         emptyContactRequestsList: emptyContactRequestsList,
-        setContactRequestsCount: setContactRequestsCount
+        setContactRequestsCount: setContactRequestsCount,
+        missedConversations: missedConversations,
+        setMissedConversationsCount: setMissedConversationsCount
     });
 }());
