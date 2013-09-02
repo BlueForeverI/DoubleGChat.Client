@@ -54,8 +54,8 @@
         });
     };
 
-    var getMissedConversations = function () {
-        var missedUrl = conversationUrl + "missed";
+    var getMissedConversations = function (conversationId) {
+        var missedUrl = conversationUrl + "missed/" + conversationId;
         var user = DoubleGChat.Data.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(missedUrl, "get", null, user.sessionKey)

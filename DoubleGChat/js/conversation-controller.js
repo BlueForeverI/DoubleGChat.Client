@@ -5,6 +5,7 @@
 
     var dataLayer = DoubleGChat.Data.Conversation;
     var viewModel = DoubleGChat.ViewModels.Conversation;
+    var currentConversation = { id: 0 };
 
     var startConversation = function (parnerId) {
         viewModel.clearMessagesList();
@@ -14,6 +15,7 @@
                 DoubleGChat.Notifications.addChannel(conversation.id, getMessages);
 
                 viewModel.currentConversation = conversation;
+                currentConversation = conversation;
                 var user = DoubleGChat.Controllers.User.getUserCredentials();
                 var partner = (conversation.firstUser.username == user.username)
                     ? conversation.secondUser : conversation.firstUser;
@@ -33,10 +35,10 @@
     };
 
     var getMessages = function (append) {
-        var conversationId = viewModel.currentConversation.id;
+        var conversationId = currentConversation.id;
         dataLayer.getMessages(conversationId)
             .then(function (messages) {
-                if(append) {
+                if (append) {
                     viewModel.appendMessages(messages);
                 } else {
                     viewModel.setMessages(messages);
@@ -44,6 +46,11 @@
             }, function (error) {
                 console.log(error);
             });
+    };
+
+    var leaveConversation = function () {
+        currentConversation = { id: 0 };
+        viewModel.currentConversation = currentConversation;
     };
 
     var markReadMissedConversations = function (missedConversationId) {
@@ -56,7 +63,7 @@
     var getMissedConversations = function () {
         viewModel.clearMissedConversations();
         return new WinJS.Promise(function (success, error, progress) {
-            dataLayer.getMissedConversations()
+            dataLayer.getMissedConversations(currentConversation.id)
                 .then(function (conversations) {
                     viewModel.setMissedConversations(conversations);
                 }, function (data) {
@@ -64,10 +71,10 @@
                 });
         });
     };
-    
+
     var getMissedConversationsCount = function () {
         return new WinJS.Promise(function (success, error, progress) {
-            dataLayer.getMissedConversations()
+            dataLayer.getMissedConversations(currentConversation.id)
                 .then(function (data) {
                     DoubleGChat.ViewModels.Global.setMissedConversationsCount(data.length);
                 }, function (data) {
@@ -89,6 +96,7 @@
         sendMessage: sendMessage,
         getMessages: getMessages,
         getMissedConversations: getMissedConversations,
-        markReadMissedConversations: markReadMissedConversations
+        markReadMissedConversations: markReadMissedConversations,
+        leaveConversation: leaveConversation
     });
 })();
