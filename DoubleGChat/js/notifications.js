@@ -33,17 +33,32 @@
         pubnub.publish(channelSettings);
     };
 
-    var emptyChannelList = function () {
+    var emptyChannelList = function() {
         while (channels.length > 0) {
             var channel = channels.pop();
             pubnub.unsubscribe(channel);
         }
-    }
+    };
+
+    var showNotification = function(message) {
+
+        var notifications = Windows.UI.Notifications;
+
+        var template = notifications.ToastTemplateType.toastText01;
+        var toastXml = notifications.ToastNotificationManager.getTemplateContent(template);
+
+        var toastTextElements = toastXml.getElementsByTagName("text");
+        toastTextElements[0].innerText = message;
+        var toast = new notifications.ToastNotification(toastXml);
+        var toastNotifier = notifications.ToastNotificationManager.createToastNotifier();
+        toastNotifier.show(toast);
+    };
 
     WinJS.Namespace.define("DoubleGChat.Notifications", {
         pubnub: pubnub,
         publish: publish,
         addChannel: addChannel,
-        emptyChannelList: emptyChannelList
+        emptyChannelList: emptyChannelList,
+        show: showNotification
     });
 })();
