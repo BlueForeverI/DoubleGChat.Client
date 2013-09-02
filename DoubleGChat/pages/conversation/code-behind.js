@@ -2,8 +2,9 @@
     "use strict";
 
     var sendMessageHandler = function () {
-        var messageContent = document.getElementById("message-content-text").value;
-        DoubleGChat.Controllers.Conversation.sendMessage(messageContent);
+        var messageElement = document.getElementById("message-content-text");
+        DoubleGChat.Controllers.Conversation.sendMessage(messageElement.value);
+        messageElement.value = "";
     };
 
     WinJS.Namespace.define("DoubleGChat.CodeBehind.Conversation", {

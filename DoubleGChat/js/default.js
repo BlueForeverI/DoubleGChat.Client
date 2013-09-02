@@ -75,6 +75,7 @@
         // that needs to persist across suspensions here. If you need to 
         // complete an asynchronous operation before your application is 
         // suspended, call args.setPromise().
+        args.setPromise(DoubleGChat.Controllers.User.goOffline());
         app.sessionState.history = nav.history;
     };
 

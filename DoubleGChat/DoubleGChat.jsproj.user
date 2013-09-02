@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ReferenceCachePath>C:\Users\George\AppData\Local\Temp\v2f3a2l3_DoubleGChat_refcache</ReferenceCachePath>
+    <ReferenceCachePath>D:\Temp\o5rctaeh_DoubleGChat_refcache</ReferenceCachePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <DebuggerFlavor>AppHostRemoteDebugger</DebuggerFlavor>

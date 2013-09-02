@@ -92,11 +92,29 @@
         });
     };
 
+    var goOffline = function () {
+        var offlineUrl = usersUrl + "offline";
+        var user = getUserCredentials();
+        return new WinJS.Promise(function (success, error, progress) {
+            if (user) {
+                DoubleGChat.RemoteData.sendRequest(offlineUrl, "get", null, user.sessionKey)
+                .then(function () {
+                }, function (response) {
+                    var text = JSON.parse(response.response);
+                    error(text);
+                });
+            } else {
+                error("You are not logged in.");
+            }
+        });
+    };
+
     WinJS.Namespace.define("DoubleGChat.Data.User", {
         login: login,
         logout: logout,
         register: register,
         getUserCredentials: getUserCredentials,
-        loginWithCurrentSession: loginWithCurrentSession
+        loginWithCurrentSession: loginWithCurrentSession,
+        goOffline: goOffline
     });
 })();

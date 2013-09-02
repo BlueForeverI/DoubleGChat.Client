@@ -51,11 +51,16 @@
         });
     };
 
+    var goOffline = function () {
+        return DoubleGChat.Data.User.goOffline();
+    };
+
     WinJS.Namespace.define("DoubleGChat.Controllers.User", {
         login: login,
         register: register,
         getUserCredentials: getUserCredentials,
         logout: logout,
-        loginWIthCurrentUserSession: loginWIthCurrentUserSession
+        loginWIthCurrentUserSession: loginWIthCurrentUserSession,
+        goOffline: goOffline
     });
 }());
