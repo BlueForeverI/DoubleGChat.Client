@@ -6,10 +6,13 @@
     var partner = WinJS.Binding.as({ username: '', profilePictureUrl: '' });
     var missedConversations = new WinJS.Binding.List([]);
 
-    var setMessages = function (messages, append) {
+    var setMessages = function (messages) {
         clearMessagesList();
         messages.forEach(function (message) {
-            messagesList.push(message);
+            var messageView = message;
+            var className = (message.sender.username == partner.username) ? "partner" : "user";
+            messageView.className = className;
+            messagesList.push(messageView);
         });
     };
 
@@ -17,7 +20,10 @@
         var startIndex = messagesList.dataSource.list.length;
         if (startIndex < messages.length) {
             for (var i = startIndex; i < messages.length; i++) {
-                messagesList.push(messages[i]);
+                var messageView = messages[i];
+                var className = (messages[i].sender.username == partner.username) ? "partner" : "user";
+                messageView.className = className;
+                messagesList.push(messageView);
             }
         }
     };
