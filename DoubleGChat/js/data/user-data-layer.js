@@ -29,7 +29,6 @@
         var loginSessionUrl = usersUrl + "session";
         var user = DoubleGChat.Controllers.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
-            progress();
             if (user) {
                 DoubleGChat.RemoteData.sendRequest(loginSessionUrl, "POST", user)
                 .done(success, function () {
@@ -46,7 +45,6 @@
         var loginUrl = usersUrl + "login";
         hashPassword(user);
         return new WinJS.Promise(function (success, error, progress) {
-            progress();
             DoubleGChat.RemoteData.sendRequest(loginUrl, "POST", user)
             .done(function (userDetails) {
                 var user = JSON.parse(userDetails.responseText);
@@ -63,7 +61,6 @@
         var loginUrl = usersUrl + "logout";
         var user = getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
-            progress();
             if (user) {
                 DoubleGChat.RemoteData.sendRequest(loginUrl, "get", null, user.sessionKey)
                 .done(function () {
@@ -83,7 +80,6 @@
         var registerUrl = usersUrl + "register";
         hashPassword(user);
         return new WinJS.Promise(function (success, error, progress) {
-            progress();
             DoubleGChat.RemoteData.sendRequest(registerUrl, "POST", user)
                 .then(function (userDetails) {
                     var user = JSON.parse(userDetails.responseText);

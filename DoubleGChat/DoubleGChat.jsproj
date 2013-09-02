@@ -71,6 +71,8 @@
     <Content Include="js\default-code-behind.js" />
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
+    <Content Include="js\notifications.js" />
+    <Content Include="js\pubnub.js" />
     <Content Include="js\search-controller.js" />
     <Content Include="js\sha1.js" />
     <Content Include="js\user-controller.js" />

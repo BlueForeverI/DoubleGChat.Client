@@ -5,10 +5,28 @@
     var contactRequests = new WinJS.Binding.List([]);
     var newConversations = new WinJS.Binding.List([]);
     var contactRequestsCount = WinJS.Binding.as(requestCount);
+
+    var setContactRequests = function (requests) {
+        requests.forEach(function (request) {
+            contactRequests.push(request);
+        });
+    };
+
+    var emptyContactRequestsList = function () {
+        contactRequests.dataSource.list
+            .splice(0, contactRequests.dataSource.list.length);
+    };
+
+    var setContactRequestsCount = function (count) {
+        contactRequestsCount.requestCount = count;
+    }
     
     WinJS.Namespace.define("DoubleGChat.ViewModels.Global", {
         contactRequests: contactRequests,
         newConversations: newConversations,
-        contactRequestsCount: contactRequestsCount
+        contactRequestsCount: contactRequestsCount,
+        setContactRequests: setContactRequests,
+        emptyContactRequestsList: emptyContactRequestsList,
+        setContactRequestsCount: setContactRequestsCount
     });
 }());

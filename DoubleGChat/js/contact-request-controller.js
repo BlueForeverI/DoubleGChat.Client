@@ -1,39 +1,39 @@
 ﻿(function () {
     "use strict";
 
+    var globalViewModel = DoubleGChat.ViewModels.Global;
+    var contactDataLayer = DoubleGChat.Data.Contacts;
+
     var getContactRequests = function () {
-        DoubleGChat.ViewModels.Global.contactRequests.dataSource.list
-            .splice(0, DoubleGChat.ViewModels.Global.contactRequests.dataSource.list.length);
+        globalViewModel.emptyContactRequestsList();
         return new WinJS.Promise(function (success, error, progress) {
-            DoubleGChat.Data.Contacts.getContactRequests()
+            contactDataLayer.getContactRequests()
             .done(function (data) {
-                data.forEach(function (item) {
-                    DoubleGChat.ViewModels.Global.contactRequests.push(item);
-                });
+                globalViewModel.setContactRequests(data);
                 success();
             }, function (data) {
                 error(data);
-            }, progress);
+            });
         });
     };
 
     var getContactRequestsCount = function () {
         return new WinJS.Promise(function (success, error, progress) {
-            DoubleGChat.Data.Contacts.getContactRequests()
+            contactDataLayer.getContactRequests()
             .done(function (data) {
-                DoubleGChat.ViewModels.Global.contactRequestsCount.requestCount = data.length;
+                globalViewModel.setContactRequestsCount(data.length);
             }, function (data) {
                 error(data);
-            }, progress);
+            });
         });
     };
 
     var sendContactRequest = function (userId) {
         return new WinJS.Promise(function (success, error, progress) {
-            DoubleGChat.Data.Contacts.sendContactRequest(userId)
+            contactDataLayer.Contacts.sendContactRequest(userId)
             .done(success, function (data) {
                 error(data);
-            }, progress);
+            });
         });
     };
 
@@ -42,7 +42,7 @@
             DoubleGChat.Data.Contacts.acceptContactRequest(requestId)
             .then(success, function (data) {
                 error(data);
-            }, progress);
+            });
         });
     };
 
@@ -51,13 +51,15 @@
             DoubleGChat.Data.Contacts.acceptContactRequest(requestId)
             .done(success, function (data) {
                 error(data);
-            }, progress);
+            });
         });
     };
 
     setInterval(function () {
         if (DoubleGChat.Data.User.getUserCredentials()) {
-            getContactRequestsCount();
+            try {
+                getContactRequestsCount();
+            } catch (e) { }
         }
     }, 1000);
 

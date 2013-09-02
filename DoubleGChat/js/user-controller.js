@@ -23,6 +23,7 @@
 
     var logout = function () {
         return new WinJS.Promise(function (success, error, progress) {
+            DoubleGChat.Notifications.emptyChannelList();
             DoubleGChat.Data.User.logout()
             .then(success, function (text) {
                 DoubleGChat.ViewModels.User.errorMessage = text;

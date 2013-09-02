@@ -6,11 +6,15 @@
     var partner = WinJS.Binding.as({ username: '', profilePictureUrl: '' });
 
     var setMessages = function (messages) {
-        var count = messagesList.dataSource.list.length;
-        messagesList.dataSource.list.splice(0, count);
+        clearMessagesList();
         messages.forEach(function (message) {
             messagesList.push(message);
         });
+    };
+
+    var clearMessagesList = function () {
+        var count = messagesList.dataSource.list.length;
+        messagesList.dataSource.list.splice(0, count);
     };
 
     var setPartner = function (user) {
@@ -23,6 +27,7 @@
         partner: partner,
         messages: messagesList,
         setMessages: setMessages,
-        setPartner: setPartner
+        setPartner: setPartner,
+        clearMessagesList: clearMessagesList
     });
 })();

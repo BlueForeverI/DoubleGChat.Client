@@ -10,9 +10,11 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="conversation.css" rel="stylesheet" />
+    <script src="../../js/data/user-data-layer.js"></script>
     <script src="../../js/data/conversation-data-layer.js"></script>
     <script src="../../js/view-models/conversation-view-model.js"></script>
     <script src="../../js/conversation-controller.js"></script>
+    <script src="code-behind.js"></script>
     <script src="conversation.js"></script>
 </head>
 <body>
@@ -49,7 +51,7 @@
 
             <div id="send-controls-container">
                 <input type="text" id="message-content-text" />
-                <input type="button" id="send-message-button" value="Send"/>
+                <input onclick="DoubleGChat.CodeBehind.Conversation.sendMessage()" type="button" id="send-message-button" value="Send"/>
             </div>
         </section>
     </div>

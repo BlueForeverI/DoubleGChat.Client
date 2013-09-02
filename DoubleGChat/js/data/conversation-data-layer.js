@@ -8,10 +8,9 @@
 
     var startConversation = function (username) {
         var startUrl = conversationUrl + "start";
-        var user = DoubleGChat.Controllers.User.getUserCredentials();
         var otherUser = { username: username };
+        var user = DoubleGChat.Data.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
-            progress();
             DoubleGChat.RemoteData.sendRequest(startUrl, "post", {
                 firstUser: user, secondUser: otherUser
             }, user.sessionKey).then(function (data) {
@@ -24,7 +23,40 @@
         });
     };
 
+    var getMessages = function (conversationId) {
+        var messagesUrl = DoubleGChat.Constants.baseUrl + "messages/byconversation/" + conversationId;
+        var user = DoubleGChat.Data.User.getUserCredentials();
+        return new WinJS.Promise(function (success, error, progress) {
+            DoubleGChat.RemoteData.sendRequest(messagesUrl, "get", null, user.sessionKey)
+                .then(function (data) {
+                var messages = JSON.parse(data.response);
+                success(messages);
+            }, function (data) {
+                var jsonData = JSON.parse(data.response);
+                error(jsonData);
+            });
+        });
+    };
+
+    var sendMessage = function (content, conversationId) {
+        var sendMessageUrl = DoubleGChat.Constants.baseUrl + "messages/send";
+        var user = DoubleGChat.Data.User.getUserCredentials();
+        return new WinJS.Promise(function (success, error, progress) {
+            DoubleGChat.RemoteData.sendRequest(sendMessageUrl, "post", {
+                content: content,
+                sender: user,
+                conversation: { id: conversationId }
+            }, user.sessionKey)
+            .then(success, function (data) {
+                var jsonData = JSON.parse(data.response);
+                error(jsonData);
+            });
+        });
+    };
+
     WinJS.Namespace.define("DoubleGChat.Data.Conversation", {
-        startConversation: startConversation
+        startConversation: startConversation,
+        getMessages: getMessages,
+        sendMessage: sendMessage
     });
 })();
