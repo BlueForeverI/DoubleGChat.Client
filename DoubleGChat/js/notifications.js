@@ -13,7 +13,11 @@
     var addChannel = function (id, func) {
         var channelSettings = {
             channel: "channel-" + id,
-            message: func
+            message: function (data) {
+                try {
+                    func(data);
+                } catch (e) { }
+            }
         };
 
         channels.push(channelSettings);
@@ -30,9 +34,9 @@
     };
 
     var emptyChannelList = function () {
-        for (var i = 0; i < channels.length; i++) {
+        while (channels.length > 0) {
             var channel = channels.pop();
-            pubnub.unsubscribe(channel.channel);
+            pubnub.unsubscribe(channel);
         }
     }
 
