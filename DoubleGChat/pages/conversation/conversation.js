@@ -4,6 +4,9 @@
     "use strict";
 
     WinJS.UI.Pages.define("/pages/conversation/conversation.html", {
+        init: function(element, options) {
+            DoubleGChat.Controllers.Conversation.startConversation(options.username);
+        },
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {

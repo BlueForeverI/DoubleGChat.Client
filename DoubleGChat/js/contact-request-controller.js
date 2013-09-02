@@ -31,9 +31,7 @@
     var sendContactRequest = function (userId) {
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.Data.Contacts.sendContactRequest(userId)
-            .done(function () {
-
-            }, function (data) {
+            .done(success, function (data) {
                 error(data);
             }, progress);
         });
@@ -51,9 +49,7 @@
     var denyContactRequest = function (requestId) {
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.Data.Contacts.acceptContactRequest(requestId)
-            .done(function () {
-
-            }, function (data) {
+            .done(success, function (data) {
                 error(data);
             }, progress);
         });
