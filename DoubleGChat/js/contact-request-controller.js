@@ -30,7 +30,7 @@
 
     var sendContactRequest = function (userId) {
         return new WinJS.Promise(function (success, error, progress) {
-            contactDataLayer.Contacts.sendContactRequest(userId)
+            contactDataLayer.sendContactRequest(userId)
             .done(success, function (data) {
                 error(data);
             });
