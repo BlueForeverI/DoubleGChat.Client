@@ -43,6 +43,10 @@
                 } else {
                     viewModel.setMessages(messages);
                 }
+
+                var listView = document.getElementById("messages-list-view").winControl;
+                msSetImmediate(function () { listView.ensureVisible(messages.length - 1); });
+                
             }, function (error) {
                 console.log(error);
             });
