@@ -1,0 +1,8 @@
+﻿.change_profile_picture p {
+    margin-left: 120px;
+}
+
+#current-picture {
+    width: 250px;
+    height: 250px;
+}
