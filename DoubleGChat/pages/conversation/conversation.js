@@ -14,6 +14,7 @@
         },
 
         unload: function () {
+            DoubleGChat.Controllers.Conversation.leaveConversation();
             // TODO: Respond to navigations away from this page.
         },
 
