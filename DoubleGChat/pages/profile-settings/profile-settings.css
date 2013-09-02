@@ -1,0 +1,12 @@
+﻿.profile_settings p {
+    margin-left: 120px;
+}
+
+input {
+    display: block;
+}
+
+#profile-image-container {
+    width: 100px;
+    height: 100px;
+}
