@@ -5,11 +5,20 @@
     var messagesList = new WinJS.Binding.List([]);
     var partner = WinJS.Binding.as({ username: '', profilePictureUrl: '' });
 
-    var setMessages = function (messages) {
+    var setMessages = function (messages, append) {
         clearMessagesList();
         messages.forEach(function (message) {
             messagesList.push(message);
         });
+    };
+
+    var appedMessages = function(messages) {
+        var startIndex = messagesList.dataSource.list.length;
+        if (startIndex < messages.length) {
+            for (var i = startIndex; i < messages.length; i++) {
+                messagesList.push(messages[i]);
+            }
+        }
     };
 
     var clearMessagesList = function () {
@@ -27,6 +36,7 @@
         partner: partner,
         messages: messagesList,
         setMessages: setMessages,
+        appendMessages: appedMessages,
         setPartner: setPartner,
         clearMessagesList: clearMessagesList
     });
