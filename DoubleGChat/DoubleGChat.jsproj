@@ -60,9 +60,11 @@
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="js\constants.js" />
-    <Content Include="js\contact-request-controller.js" />
-    <Content Include="js\contacts-controller.js" />
-    <Content Include="js\conversation-controller.js" />
+    <Content Include="js\controllers\contact-request-controller.js" />
+    <Content Include="js\controllers\contacts-controller.js" />
+    <Content Include="js\controllers\conversation-controller.js" />
+    <Content Include="js\controllers\search-controller.js" />
+    <Content Include="js\controllers\user-controller.js" />
     <Content Include="js\data-requester.js" />
     <Content Include="js\data\contacts-data-layer.js" />
     <Content Include="js\data\conversation-data-layer.js" />
@@ -73,9 +75,7 @@
     <Content Include="js\navigator.js" />
     <Content Include="js\notifications.js" />
     <Content Include="js\pubnub.js" />
-    <Content Include="js\search-controller.js" />
     <Content Include="js\sha1.js" />
-    <Content Include="js\user-controller.js" />
     <Content Include="js\user-model.js" />
     <Content Include="js\view-models\contacts-view-model.js" />
     <Content Include="js\view-models\conversation-view-model.js" />
@@ -96,7 +96,6 @@
     <Content Include="pages\conversation\conversation.js" />
     <Content Include="default.html" />
     <Content Include="pages\login\code-behind.js" />
-    <Content Include="pages\login\login-view-model.js" />
     <Content Include="pages\login\login.css" />
     <Content Include="pages\login\login.html" />
     <Content Include="pages\login\login.js" />
@@ -115,9 +114,6 @@
     <Content Include="pages\search-results\search-results.css" />
     <Content Include="pages\search-results\search-results.html" />
     <Content Include="pages\search-results\search-results.js" />
-    <Content Include="pages\user-profile\user-profile.css" />
-    <Content Include="pages\user-profile\user-profile.html" />
-    <Content Include="pages\user-profile\user-profile.js" />
     <None Include="DoubleGChat_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

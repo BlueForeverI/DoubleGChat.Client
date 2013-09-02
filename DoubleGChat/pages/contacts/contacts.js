@@ -14,6 +14,7 @@
         },
 
         unload: function () {
+            DoubleGChat.Controllers.Contacts.clearFriendList();
             // TODO: Respond to navigations away from this page.
         },
 

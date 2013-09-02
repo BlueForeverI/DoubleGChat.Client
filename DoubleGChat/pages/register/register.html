@@ -3,17 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>register</title>
-
-    <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
-    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
-    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
-
     <link href="register.css" rel="stylesheet" />
-    <script src="../../js/view-models/user-view-model.js"></script>
-    <script src="../../js/user-controller.js"></script>
-    <script src="code-behind.js"></script>
-    <script src="register.js"></script>
 </head>
 <body>
     <div class="register fragment">
@@ -32,8 +22,8 @@
             <input id="username" type="text" name="username" value="" placeholder="username" />
             <label for="password">Password</label>
             <input id="password" type="password" name="password" value="" placeholder="password" />
-            <button id="add-picture-button" 
-                    onclick="DoubleGChat.CodeBehind.UserRegister.addPicture(event)">
+            <button id="add-picture-button"
+                onclick="DoubleGChat.CodeBehind.UserRegister.addPicture(event)">
                 Add Profile Picture
             </button>
             <div id="picture-menu-container">

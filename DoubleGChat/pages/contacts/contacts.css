@@ -1,4 +1,9 @@
-﻿.contacts section[role=main] {
+﻿.user-status {
+    width: 10px;
+    height: 10px;
+}
+
+.contacts section[role=main] {
     margin-left: 120px;
     margin-right: 120px;
 }
