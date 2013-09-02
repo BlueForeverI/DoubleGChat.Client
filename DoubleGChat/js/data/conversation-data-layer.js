@@ -29,12 +29,12 @@
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(messagesUrl, "get", null, user.sessionKey)
                 .then(function (data) {
-                var messages = JSON.parse(data.response);
-                success(messages);
-            }, function (data) {
-                var jsonData = JSON.parse(data.response);
-                error(jsonData);
-            });
+                    var messages = JSON.parse(data.response);
+                    success(messages);
+                }, function (data) {
+                    var jsonData = JSON.parse(data.response);
+                    error(jsonData);
+                });
         });
     };
 
@@ -54,9 +54,38 @@
         });
     };
 
+    var getMissedConversations = function () {
+        var missedUrl = conversationUrl + "missed";
+        var user = DoubleGChat.Data.User.getUserCredentials();
+        return new WinJS.Promise(function (success, error, progress) {
+            DoubleGChat.RemoteData.sendRequest(missedUrl, "get", null, user.sessionKey)
+                .then(function (data) {
+                    var jsonData = JSON.parse(data.response);
+                    success(jsonData);
+                }, function (data) {
+                    var jsonData = JSON.parse(data.response);
+                    error(jsonData);
+                });
+        });
+    };
+
+    var markReadMissedConversations = function (id) {
+        var missedUrl = conversationUrl + "markread/" + id;
+        var user = DoubleGChat.Data.User.getUserCredentials();
+        return new WinJS.Promise(function (success, error, progress) {
+            DoubleGChat.RemoteData.sendRequest(missedUrl, "get", null, user.sessionKey)
+                .then(success, function (data) {
+                    var jsonData = JSON.parse(data.response);
+                    error(jsonData);
+                });
+        });
+    };
+
     WinJS.Namespace.define("DoubleGChat.Data.Conversation", {
         startConversation: startConversation,
         getMessages: getMessages,
-        sendMessage: sendMessage
+        sendMessage: sendMessage,
+        getMissedConversations: getMissedConversations,
+        markReadMissedConversations: markReadMissedConversations
     });
 })();

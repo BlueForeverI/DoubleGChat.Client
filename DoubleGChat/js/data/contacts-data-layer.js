@@ -23,7 +23,7 @@
         var user = DoubleGChat.Data.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(requestContactUrl, "get", null, user.sessionKey)
-            .done(function (response) {
+            .then(function (response) {
                 var data = JSON.parse(response.response);
                 success(data);
             }, function (response) {

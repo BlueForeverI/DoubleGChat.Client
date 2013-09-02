@@ -4,6 +4,7 @@
     var currentConversation = {};
     var messagesList = new WinJS.Binding.List([]);
     var partner = WinJS.Binding.as({ username: '', profilePictureUrl: '' });
+    var missedConversations = new WinJS.Binding.List([]);
 
     var setMessages = function (messages, append) {
         clearMessagesList();
@@ -12,7 +13,7 @@
         });
     };
 
-    var appedMessages = function(messages) {
+    var appedMessages = function (messages) {
         var startIndex = messagesList.dataSource.list.length;
         if (startIndex < messages.length) {
             for (var i = startIndex; i < messages.length; i++) {
@@ -31,6 +32,17 @@
         partner.profilePictureUrl = user.profilePictureUrl;
     };
 
+    var setMissedConversations = function (conversations) {
+        conversations.forEach(function (conversation) {
+            missedConversations.push(conversation);
+        });
+    };
+
+    var clearMissedConversations = function () {
+        var count = missedConversations.dataSource.list.length;
+        missedConversations.dataSource.list.splice(0, count);
+    };
+
     WinJS.Namespace.define("DoubleGChat.ViewModels.Conversation", {
         currentConversation: currentConversation,
         partner: partner,
@@ -38,6 +50,9 @@
         setMessages: setMessages,
         appendMessages: appedMessages,
         setPartner: setPartner,
-        clearMessagesList: clearMessagesList
+        clearMessagesList: clearMessagesList,
+        missedConversations: missedConversations,
+        setMissedConversations: setMissedConversations,
+        clearMissedConversations: clearMissedConversations
     });
 })();

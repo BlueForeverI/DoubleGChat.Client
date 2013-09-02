@@ -46,9 +46,49 @@
             });
     };
 
+    var markReadMissedConversations = function (missedConversationId) {
+        return new WinJS.Promise(function (success, error, progress) {
+            dataLayer.markReadMissedConversations(missedConversationId)
+                .then(success);
+        });
+    };
+
+    var getMissedConversations = function () {
+        viewModel.clearMissedConversations();
+        return new WinJS.Promise(function (success, error, progress) {
+            dataLayer.getMissedConversations()
+                .then(function (conversations) {
+                    viewModel.setMissedConversations(conversations);
+                }, function (data) {
+                    console.log(data);
+                });
+        });
+    };
+    
+    var getMissedConversationsCount = function () {
+        return new WinJS.Promise(function (success, error, progress) {
+            dataLayer.getMissedConversations()
+                .then(function (data) {
+                    DoubleGChat.ViewModels.Global.setMissedConversationsCount(data.length);
+                }, function (data) {
+                    console.log(data);
+                });
+        });
+    };
+
+    setInterval(function () {
+        if (DoubleGChat.Data.User.getUserCredentials()) {
+            try {
+                getMissedConversationsCount();
+            } catch (e) { }
+        }
+    }, 1000);
+
     WinJS.Namespace.define("DoubleGChat.Controllers.Conversation", {
         startConversation: startConversation,
         sendMessage: sendMessage,
-        getMessages: getMessages
+        getMessages: getMessages,
+        getMissedConversations: getMissedConversations,
+        markReadMissedConversations: markReadMissedConversations
     });
 })();

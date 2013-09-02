@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>missed-conversations</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="missed-conversations.css" rel="stylesheet" />
+    <script src="../../js/view-models/conversation-view-model.js"></script>
+    <script src="code-behind.js"></script>
+    <script src="missed-conversations.js"></script>
+</head>
+<body>
+    <div id="user-template-container" data-win-control="WinJS.Binding.Template">
+        <div class="computer-template">
+            <img src="#" data-win-bind="src: profilePictureUrl" height="150" width="150" />
+            <h3 data-win-bind="innerText: username"></h3>
+            <h4 data-win-bind="innerText: firstName"></h4>
+            <h4 data-win-bind="innerText: lastName"></h4>
+        </div>
+    </div>
+
+    <div class="missed_conversations fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to missed-conversations</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div data-win-control="WinJS.UI.ListView"
+                data-win-options="{
+                    itemTemplate: select('#user-template-container'),
+                    itemDataSource: DoubleGChat.ViewModels.Conversation.missedConversations.dataSource,
+                    oniteminvoked: DoubleGChat.CodeBehind.MissedConversations.goToConversationPage,
+                    selectionMode: 'none',
+                    layout: { type: WinJS.UI.GridLayout }
+                    }">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -2,11 +2,12 @@
     "use strict";
 
     var usersUrl = DoubleGChat.Constants.baseUrl + "users/search";
-    var user = DoubleGChat.Data.User.getUserCredentials();
 
     var getUsersByQueryText = function (queryText) {
+        var user = DoubleGChat.Data.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
-            DoubleGChat.RemoteData.sendRequest(usersUrl, "POST", { queryText: queryText }, user.sessionKey)
+            if (user) {
+                DoubleGChat.RemoteData.sendRequest(usersUrl, "POST", { queryText: queryText }, user.sessionKey)
                 .then(function (userDetails) {
                     var users = JSON.parse(userDetails.responseText);
                     success(users);
@@ -14,6 +15,9 @@
                     var text = JSON.parse(response.response);
                     error(text);
                 });
+            } else {
+                error("You are not logged in.");
+            }
         });
     };
 
