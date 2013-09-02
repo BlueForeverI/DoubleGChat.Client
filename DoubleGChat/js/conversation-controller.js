@@ -32,11 +32,15 @@
         });
     };
 
-    var getMessages = function () {
+    var getMessages = function (append) {
         var conversationId = viewModel.currentConversation.id;
         dataLayer.getMessages(conversationId)
             .then(function (messages) {
-                viewModel.setMessages(messages);
+                if(append) {
+                    viewModel.appendMessages(messages);
+                } else {
+                    viewModel.setMessages(messages);
+                }
             }, function (error) {
                 console.log(error);
             });
