@@ -6,6 +6,9 @@
     <link href="login.css" rel="stylesheet" />
 </head>
 <body>
+    <div id="nav-bar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement: 'top'}">
+        <button onclick='DoubleGChat.CodeBehind.Default.goToRegister(event)' data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdContacts', label:'Register Account', icon:'register'}" type="button"></button>
+    </div>
     <div class="login_fragment">
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
@@ -14,7 +17,7 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <div id="login-form">
+            <div id="login-form" onkeydown="DoubleGChat.CodeBehind.UserLogin.keydown(event)">
                 <label for="username">USERNAME</label>
                 <input id="username" type="text" name="username" value="" placeholder="username" />
                 <label for="password">PASSWORD</label>

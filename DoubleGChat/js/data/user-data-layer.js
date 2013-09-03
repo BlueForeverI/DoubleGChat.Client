@@ -17,29 +17,29 @@
         Windows.Storage.ApplicationData.current.localSettings.values["userCredentials"] = JSON.stringify(user);
     };
 
-    var removeUserCredentials = function () {
+    var removeUserCredentials = function() {
         Windows.Storage.ApplicationData.current.localSettings.values["userCredentials"] = null;
-    }
+    };
 
-    var hashPassword = function (user) {
+    var hashPassword = function(user) {
         user.passwordHash = CryptoJS.SHA1(user.passwordHash).toString();
-    }
+    };
 
-    var loginWithCurrentSession = function () {
+    var loginWithCurrentSession = function() {
         var loginSessionUrl = usersUrl + "session";
         var user = DoubleGChat.Controllers.User.getUserCredentials();
-        return new WinJS.Promise(function (success, error, progress) {
+        return new WinJS.Promise(function(success, error, progress) {
             if (user) {
                 DoubleGChat.RemoteData.sendRequest(loginSessionUrl, "POST", user)
-                .done(success, function () {
-                    removeUserCredentials();
-                    error();
-                });
+                    .done(success, function() {
+                        removeUserCredentials();
+                        error();
+                    });
             } else {
                 error();
             }
         });
-    }
+    };
 
     var login = function (user) {
         var loginUrl = usersUrl + "login";

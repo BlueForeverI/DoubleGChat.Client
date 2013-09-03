@@ -4,9 +4,13 @@
     <meta charset="utf-8" />
     <meta name="ms-design-extensionType" content="Search" />
     <title>User Search</title>
-    <link href="/pages/search-results/search_results.css" rel="stylesheet" />
+    <link href="/pages/search-results/search-results.css" rel="stylesheet" />
 </head>
 <body>
+    <div id="nav-bar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement: 'top'}">
+        <button onclick='DoubleGChat.CodeBehind.Default.navigateToContacts()' data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdContacts', label:'Your Contacts', icon:'viewall'}" type="button"></button>
+        <button onclick='DoubleGChat.CodeBehind.Default.logout(event)' data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdLeave', label:'Log out', icon:'left'}" type="button"></button>
+    </div>
     <div id="user-template-container" data-win-control="WinJS.Binding.Template">
         <div class="user-template">
             <img src="#" data-win-bind="src: profilePictureUrl" height="150" width="150" />
@@ -28,11 +32,11 @@
         <section aria-label="Main content" role="main">
             <div id="search-results-list-view" data-win-control="WinJS.UI.ListView"
                 data-win-options="{
-                    itemTemplate: select('#user-template-container'),
-                    itemDataSource: DoubleGChat.ViewModels.Search.foundUsers.dataSource,
-                    onselectionchanged: DoubleGChat.CodeBehind.Search.selectUser,
-                    tapBehavior: 'directSelect',
-                    selectionMode: 'single'
+	            itemTemplate: select('#user-template-container'),
+	            itemDataSource: DoubleGChat.ViewModels.Search.foundUsers.dataSource,
+	            onselectionchanged: DoubleGChat.CodeBehind.Search.selectUser,
+	            tapBehavior: 'directSelect',
+	            selectionMode: 'single'
                     }">
             </div>
         </section>

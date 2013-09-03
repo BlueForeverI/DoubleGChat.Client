@@ -1,6 +1,13 @@
 ﻿(function () {
     "use strict";
 
+    var enterHandler = function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            registerHandler(event);
+        }
+    };
+
     var registerHandler = function (event) {
         var userName = document.getElementById("username");
         var password = document.getElementById("password");
@@ -90,6 +97,7 @@
 
     WinJS.Namespace.define("DoubleGChat.CodeBehind.UserRegister", {
         register: registerHandler,
-        addPicture: addPictureHandler
+        addPicture: addPictureHandler,
+        keydown: enterHandler
     });
 })();

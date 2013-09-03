@@ -6,6 +6,9 @@
     <link href="register.css" rel="stylesheet" />
 </head>
 <body>
+    <div id="nav-bar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement: 'top'}">
+        <button onclick='DoubleGChat.CodeBehind.Default.goToLogin(event)' data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdContacts', label:'Login', icon:'login'}" type="button"></button>
+    </div>
     <div class="register_fragment">
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
@@ -14,7 +17,7 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <div id="registration-form">
+            <div id="registration-form" onkeydown="DoubleGChat.CodeBehind.UserRegister.keydown(event)">
                 <label for="username">USERNAME</label>
                 <input id="username" type="text" name="username" value="" placeholder="username" />
                 <label for="password">PASSWORD</label>
@@ -23,14 +26,14 @@
                 <input id="first-name" type="text" name="first-name" value="" placeholder="first name" />
                 <label for="last-name">LAST NAME</label>
                 <input id="last-name" type="text" name="last-name" value="" placeholder="last name" />
-                
+
                 <button id="register" onclick="DoubleGChat.CodeBehind.UserRegister.register(event)">REGISTER</button>
-                
+
             </div>
             <div id="information-form">
                 <img id="profile-image-container" src="http://imgur.com/3CC50ov.jpg" />
                 <button id="add-picture-button"
-                        onclick="DoubleGChat.CodeBehind.UserRegister.addPicture(event)">
+                    onclick="DoubleGChat.CodeBehind.UserRegister.addPicture(event)">
                     ADD PROFILE PICTURE
                 </button>
                 <div id="picture-menu-container">
