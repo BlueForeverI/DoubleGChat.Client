@@ -44,6 +44,7 @@
                     viewModel.setMessages(messages);
                 }
 
+                // It's ungly but it works...
                 var listView = document.getElementById("messages-list-view").winControl;
                 msSetImmediate(function () { listView.ensureVisible(messages.length - 1); });
                 

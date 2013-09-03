@@ -75,6 +75,7 @@
     <Content Include="js\navigator.js" />
     <Content Include="js\notifications.js" />
     <Content Include="js\pubnub.js" />
+    <Content Include="js\repeater-control.js" />
     <Content Include="js\sha1.js" />
     <Content Include="js\user-model.js" />
     <Content Include="js\view-models\contacts-view-model.js" />
