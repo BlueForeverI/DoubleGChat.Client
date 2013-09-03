@@ -62,11 +62,11 @@
 <body>
     <button id="contact-request-button"
         onclick="DoubleGChat.CodeBehind.Default.navigateToContactRequests(event)"
-        data-win-bind="innerText: contactRequestsCount.requestCount">
+        data-win-bind="innerText: contactRequestsCount.requestCount; style.display: contactRequestsCount.requestCount DoubleGChat.ViewModels.Global.requestCountToVisibility">
     </button>
     <button id="missed-conversation-button"
         onclick="DoubleGChat.CodeBehind.Default.navigateToConversations()"
-        data-win-bind="innerText: missedConversations.count">
+        data-win-bind="innerText: missedConversations.count; style.display: missedConversations.count DoubleGChat.ViewModels.Global.requestCountToVisibility">
     </button>
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/login/login.html'}"></div>
 </body>

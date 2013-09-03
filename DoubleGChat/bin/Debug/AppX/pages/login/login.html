@@ -22,8 +22,8 @@
                 <input id="username" type="text" name="username" value="" placeholder="username" />
                 <label for="password">PASSWORD</label>
                 <input id="password" type="password" name="password" value="" placeholder="password" />
+                <span class="error" data-win-bind="innerText: errorMessage"></span>
                 <button id="login" onclick="DoubleGChat.CodeBehind.UserLogin.login(event)">LOGIN</button>
-                <span data-win-bind="innerText: errorMessage"></span>
             </div>
         </section>
     </div>

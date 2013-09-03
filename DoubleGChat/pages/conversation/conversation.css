@@ -68,7 +68,8 @@
 }
 
 #chat-container {
-    width: 73%;
+    width: 70%;
+    margin-left: 20px;
 }
 
 #partner-info-container {
@@ -84,7 +85,7 @@
 
 #partner-details-container {
     height: 65%;
-    background: #15D6FF;
+    background: rgba(21, 214, 255, 0.4);
 }
 
 #partner-username {

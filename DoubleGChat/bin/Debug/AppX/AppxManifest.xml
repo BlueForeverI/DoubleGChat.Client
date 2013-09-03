@@ -10,7 +10,7 @@
   <Identity Name="a0b3455d-c06e-44f2-9097-6fd554447f59" Version="1.0.0.0" Publisher="CN=Georgi" ProcessorArchitecture="neutral" />
   <Properties>
     <DisplayName>DoubleGChat</DisplayName>
-    <PublisherDisplayName>Georgi</PublisherDisplayName>
+    <PublisherDisplayName>Georgi Yolovski &amp; Georgi Vorobyov</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -22,8 +22,8 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="DoubleGChat" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="DoubleGChat" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
-        <DefaultTile ShowName="allLogos" />
+      <VisualElements DisplayName="DoubleG Chat" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="A minimalistic instant messaging application" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
+        <DefaultTile ShowName="allLogos" WideLogo="images\widelogo.png" ShortName="GChat" />
         <SplashScreen Image="images\splashscreen.png" />
       </VisualElements>
       <Extensions>
@@ -33,6 +33,7 @@
     </Application>
   </Applications>
   <Capabilities>
+    <Capability Name="picturesLibrary" />
     <Capability Name="internetClient" />
     <DeviceCapability Name="webcam" />
   </Capabilities>

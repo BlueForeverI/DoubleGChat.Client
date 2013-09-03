@@ -1,4 +1,8 @@
-﻿.login section[role=main] {
+﻿.error {
+    color: #F87171;
+}
+
+.login section[role=main] {
     margin-left: 120px;
     margin-right: 120px;
 }
@@ -8,8 +12,9 @@
 }
 
 .login_fragment {
+    top: 20px;
     position: absolute;
-    left:35%;
+    left: 35%;
 }
 
 #login-form input {
@@ -43,7 +48,7 @@
     .login_fragment {
         width: 90%;
         position: absolute;
-        left:5%;
+        left: 5%;
     }
 
     #login-form {

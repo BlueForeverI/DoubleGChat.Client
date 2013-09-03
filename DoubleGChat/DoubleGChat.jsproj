@@ -54,6 +54,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="css\default.css" />
+    <Content Include="images\badgelogo.png" />
     <Content Include="images\contact-request.png" />
     <Content Include="images\default-profile-picture.jpeg" />
     <Content Include="images\loading.gif" />
@@ -62,6 +63,7 @@
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
+    <Content Include="images\widelogo.png" />
     <Content Include="js\constants.js" />
     <Content Include="js\controllers\contact-request-controller.js" />
     <Content Include="js\controllers\contacts-controller.js" />

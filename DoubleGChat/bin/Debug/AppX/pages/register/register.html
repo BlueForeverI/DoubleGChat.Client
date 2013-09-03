@@ -26,7 +26,6 @@
                 <input id="first-name" type="text" name="first-name" value="" placeholder="first name" />
                 <label for="last-name">LAST NAME</label>
                 <input id="last-name" type="text" name="last-name" value="" placeholder="last name" />
-
                 <button id="register" onclick="DoubleGChat.CodeBehind.UserRegister.register(event)">REGISTER</button>
 
             </div>
@@ -38,8 +37,8 @@
                 </button>
                 <div id="picture-menu-container">
                     <div id="picture-menu-id" data-win-control="WinJS.UI.Menu" data-win-options="{anchor:'add-picture-button'}">
-                        <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'from-file-button',label:'From File'}"></button>
-                        <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'from-camera-button',label:'From Camera'}"></button>
+                        <button onclick="DoubleGChat.CodeBehind.UserRegister.filePicker()" data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'from-file-button',label:'From File'}"></button>
+                        <button onclick="DoubleGChat.CodeBehind.UserRegister.cameraPicker()" data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'from-camera-button',label:'From Camera'}"></button>
                     </div>
                 </div>
                 <span data-win-bind="innerText: errorMessage"></span>

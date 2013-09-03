@@ -1,5 +1,6 @@
 css\default.css
 default.html
+images\badgelogo.png
 images\contact-request.png
 images\default-profile-picture.jpeg
 images\loading.gif
@@ -8,6 +9,7 @@ images\new-conversation.png
 images\smalllogo.png
 images\splashscreen.png
 images\storelogo.png
+images\widelogo.png
 js\constants.js
 js\controllers\contact-request-controller.js
 js\controllers\contacts-controller.js

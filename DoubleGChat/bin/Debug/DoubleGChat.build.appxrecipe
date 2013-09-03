@@ -43,6 +43,9 @@
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\search-results\search-results.css">
       <PackagePath>pages\search-results\search-results.css</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\badgelogo.png">
+      <PackagePath>images\badgelogo.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\contact-request.png">
       <PackagePath>images\contact-request.png</PackagePath>
     </AppxPackagedFile>
@@ -63,6 +66,10 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\storelogo.png">
       <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\widelogo.png">
+      <PackagePath>images\widelogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\default-profile-picture.jpeg">
