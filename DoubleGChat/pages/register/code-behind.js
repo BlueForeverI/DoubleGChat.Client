@@ -23,73 +23,40 @@
         });
     };
 
-    var uploadImage = function (storageFile) {
-        return new WinJS.Promise(function (success) {
-            var file = MSApp.createFileFromStorageFile(storageFile);
+    var addPictureHandler = (function (event) {
+        var menu = document.getElementById("picture-menu-id").winControl;
+        menu.show();
+    });
 
-            if (!file || !file.type.match(/image.*/)) {
-                return;
-            }
+    var filePicker = function () {
+        var controller = DoubleGChat.Controllers.User;
+        controller.pickPicture()
+        .then(function (storageFile) {
+            var container = document.getElementById("profile-image-container");
+            container.setAttribute("src", "../../images/loading.gif");
 
-            var fd = new FormData();
-            fd.append("image", file);
-            fd.append("key", "6528448c258cff474ca9701c5bab6927");
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://api.imgur.com/2/upload.json");
-
-            xhr.onload = function () {
-                var imgUrl = JSON.parse(xhr.responseText).upload.links.imgur_page + ".jpg";
-                success(imgUrl);
-            };
-
-            xhr.send(fd);
+            controller.uploadPicture(storageFile).then(function (url) {
+                container.setAttribute("src", url);
+            });
         });
     };
 
-    var addPictureHandler = (function (event) {
+    var cameraPicker = function () {
+        var controller = DoubleGChat.Controllers.User;
+        controller.takePicture().then(function (capturedItem) {
+            var container = document.getElementById("profile-image-container");
+            container.setAttribute("src", "../../images/loading.gif");
 
-
-        var menu = document.getElementById("picture-menu-id").winControl;
-        menu.show();
-
-        var fromFileButton = document.getElementById("from-file-button");
-        var fromCameraButton = document.getElementById("from-camera-button");
-
-        fromFileButton.addEventListener("click", function (ev) {
-            var picker = Windows.Storage.Pickers.FileOpenPicker();
-            picker.fileTypeFilter.push(".jpg");
-            picker.fileTypeFilter.push(".jpeg");
-            picker.fileTypeFilter.push(".png");
-
-            picker.pickSingleFileAsync().then(function (storageFile) {
-                if (storageFile) {
-                    var container = document.getElementById("profile-image-container");
-                    container.setAttribute("src", "../../images/loading.gif");
-                    
-                    uploadImage(storageFile).then(function (url) {
-                        container.setAttribute("src", url);
-                    });
-                }
+            controller.uploadPicture(capturedItem).then(function (url) {
+                container.setAttribute("src", url);
             });
         });
-
-        fromCameraButton.addEventListener("click", function (ev) {
-            var captureUI = new Windows.Media.Capture.CameraCaptureUI();
-            captureUI.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (capturedItem) {
-                if (capturedItem) {
-                    var container = document.getElementById("profile-image-container");
-                    container.setAttribute("src", "../../images/loading.gif");
-
-                    uploadImage(capturedItem).then(function (url) {
-                        container.setAttribute("src", url);
-                    });
-                }
-            });
-        });
-    });
+    };
 
     WinJS.Namespace.define("DoubleGChat.CodeBehind.UserRegister", {
         register: registerHandler,
-        addPicture: addPictureHandler
+        addPicture: addPictureHandler,
+        filePicker: filePicker,
+        cameraPicker: cameraPicker
     });
 })();

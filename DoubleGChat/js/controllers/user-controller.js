@@ -1,6 +1,9 @@
 ﻿(function () {
     "use strict";
 
+    var picker = Windows.Storage.Pickers.FileOpenPicker();
+    var camera = new Windows.Media.Capture.CameraCaptureUI();
+
     var getUserCredentials = function () {
         return DoubleGChat.Data.User.getUserCredentials();
     };
@@ -55,12 +58,65 @@
         return DoubleGChat.Data.User.goOffline();
     };
 
+    var pickPicture = function pickPicture() {
+        picker.fileTypeFilter.push(".jpg");
+        picker.fileTypeFilter.push(".jpeg");
+        picker.fileTypeFilter.push(".png");
+        return new WinJS.Promise(function (success, error, progress) {
+            picker.pickSingleFileAsync().then(function (storageFile) {
+                if (storageFile) {
+                    success(storageFile);
+                }
+            }, function (e) {
+                error(e);
+            });
+        });
+    };
+
+    var takePicture = function () {
+        return new WinJS.Promise(function (success, error, progress) {
+            camera.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (capturedItem) {
+                if (capturedItem) {
+                    success(capturedItem);
+                }
+            }, function (e) {
+                console.log(e);
+            });
+        });
+    };
+
+    var uploadPicture = function (storageFile) {
+        return new WinJS.Promise(function (success) {
+            var file = MSApp.createFileFromStorageFile(storageFile);
+
+            if (!file || !file.type.match(/image.*/)) {
+                return;
+            }
+
+            var fd = new FormData();
+            fd.append("image", file);
+            fd.append("key", "6528448c258cff474ca9701c5bab6927");
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://api.imgur.com/2/upload.json");
+
+            xhr.onload = function () {
+                var imgUrl = JSON.parse(xhr.responseText).upload.links.imgur_page + ".jpg";
+                success(imgUrl);
+            };
+
+            xhr.send(fd);
+        });
+    };
+
     WinJS.Namespace.define("DoubleGChat.Controllers.User", {
         login: login,
         register: register,
         getUserCredentials: getUserCredentials,
         logout: logout,
         loginWIthCurrentUserSession: loginWIthCurrentUserSession,
-        goOffline: goOffline
+        goOffline: goOffline,
+        takePicture: takePicture,
+        uploadPicture: uploadPicture,
+        pickPicture: pickPicture
     });
 }());
