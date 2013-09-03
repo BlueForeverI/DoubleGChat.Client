@@ -10,9 +10,7 @@
     var nav = WinJS.Navigation;
 
     var appModel = Windows.ApplicationModel;
-    var appViewState = Windows.UI.ViewManagement.ApplicationViewState;
     var ui = WinJS.UI;
-    var utils = WinJS.Utilities;
     var searchPageURI = "/pages/search-results/search-results.html";
 
     var loginWithSessionKey = function () {
@@ -80,6 +78,12 @@
         // suspended, call args.setPromise().
         args.setPromise(DoubleGChat.Controllers.User.goOffline());
         app.sessionState.history = nav.history;
+        //WinJS.UI.AppBarIcon.go
+        //WinJS.UI.AppBarIcon.globe
+        //WinJS.UI.AppBarIcon.more
+        //WinJS.UI.AppBarIcon.memo
+        //WinJS.UI.AppBarIcon.
+
     };
 
     app.start();
