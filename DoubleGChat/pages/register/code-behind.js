@@ -58,12 +58,12 @@
         fromFileButton.addEventListener("click", function (ev) {
             var picker = Windows.Storage.Pickers.FileOpenPicker();
             picker.fileTypeFilter.push(".jpg");
+            picker.fileTypeFilter.push(".jpeg");
             picker.fileTypeFilter.push(".png");
 
             picker.pickSingleFileAsync().then(function (storageFile) {
                 if (storageFile) {
                     var container = document.getElementById("profile-image-container");
-                    container.style.display = "inline";
                     container.setAttribute("src", "../../images/loading.gif");
 
                     uploadImage(storageFile).then(function (url) {
@@ -78,7 +78,6 @@
             captureUI.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (capturedItem) {
                 if (capturedItem) {
                     var container = document.getElementById("profile-image-container");
-                    container.style.display = "inline";
                     container.setAttribute("src", "../../images/loading.gif");
 
                     uploadImage(capturedItem).then(function (url) {
