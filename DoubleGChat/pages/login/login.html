@@ -6,7 +6,7 @@
     <link href="login.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="login fragment">
+    <div class="login_fragment">
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
@@ -14,10 +14,14 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <input id="username" type="text" name="username" value="" placeholder="username" />
-            <input id="password" type="password" name="password" value="" placeholder="password" />
-            <button id="login" onclick="DoubleGChat.CodeBehind.UserLogin.login(event)">Login</button>
-            <span data-win-bind="innerText: errorMessage"></span>
+            <div id="login-form">
+                <label for="username">USERNAME</label>
+                <input id="username" type="text" name="username" value="" placeholder="username" />
+                <label for="password">PASSWORD</label>
+                <input id="password" type="password" name="password" value="" placeholder="password" />
+                <button id="login" onclick="DoubleGChat.CodeBehind.UserLogin.login(event)">LOGIN</button>
+                <span data-win-bind="innerText: errorMessage"></span>
+            </div>
         </section>
     </div>
 </body>
