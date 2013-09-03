@@ -43,15 +43,15 @@
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\search-results\search-results.css">
       <PackagePath>pages\search-results\search-results.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\default-profile-picture.jpeg">
-      <PackagePath>images\default-profile-picture.jpeg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\loading.gif">
-      <PackagePath>images\loading.gif</PackagePath>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\contact-request.png">
+      <PackagePath>images\contact-request.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\new-conversation.png">
+      <PackagePath>images\new-conversation.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\smalllogo.png">
       <PackagePath>images\smalllogo.png</PackagePath>
@@ -64,6 +64,12 @@
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\storelogo.png">
       <PackagePath>images\storelogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\default-profile-picture.jpeg">
+      <PackagePath>images\default-profile-picture.jpeg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\images\loading.gif">
+      <PackagePath>images\loading.gif</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\constants.js">
       <PackagePath>js\constants.js</PackagePath>

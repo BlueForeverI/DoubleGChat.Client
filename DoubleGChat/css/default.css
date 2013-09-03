@@ -3,6 +3,25 @@
     width: 100%;
 }
 
+#missed-conversation-button, #contact-request-button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+
+#missed-conversation-button {
+    background-image: url('../images/new-conversation.png');
+}
+
+#contact-request-button {
+    background-image: url('../images/contact-request.png');
+}
+
 .fragment {
     /* Define a grid with rows for a banner and a body */
     -ms-grid-columns: 1fr;

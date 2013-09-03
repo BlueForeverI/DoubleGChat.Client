@@ -1,41 +1,42 @@
-﻿.win-listview {
+﻿.conversation .win-listview {
     height: 500px;
     width: 100%;
 }
 
-.win-listview .win-item {
-    margin: 0px;
-    padding: 0px;
-}
+    .conversation .win-listview .win-item {
+        /*min-height:*/
+        margin: 0px;
+        padding: 0px;
+    }
 
-.win-listview .win-container {
-    margin: 0px;
-    padding: 0px;
-}
+    .conversation .win-listview .win-container {
+        margin: 0px;
+        padding: 0px;
+    }
 
-.win-listview dd, dt {
-    display: inline;
-    margin: 0px
-}
+    .conversation .win-listview dd, dt {
+        display: inline;
+        margin: 0px;
+    }
 
-.win-listview dd {
-    padding: 20px;
-    width: 100%;
-    float: left;
-    min-height: 100px;
-}
+    .conversation .win-listview dd {
+        padding: 20px;
+        min-height: 100px;
+        width: 100%;
+        float: left;
+    }
 
-.win-listview dt {
-    text-align: right;
-    float: right;
-    padding-right: 10px;
-}
+    .conversation .win-listview dt {
+        text-align: right;
+        float: right;
+        padding-right: 10px;
+    }
 
-.win-listview dd div {
-    display: inline;
-}
+    .conversation .win-listview dd div {
+        display: inline;
+    }
 
-.partner div, .user div {
+.conversation .partner div, .user div {
     display: inline;
 }
 
@@ -43,10 +44,6 @@
     width: 200px;
 }
 
-.title-partner-username {
-    color: #15D6FF;
-    font-weight: bold;
-}
 
 .conversation section[role=main] {
     margin-left: 120px;
@@ -95,11 +92,17 @@
 }
 
 .user dd {
-    background: #FF8519;
+    background: rgba(255, 133, 25, 0.4);
 }
 
 .partner dd {
-    background: #15D6FF;
+    background: rgba(21, 214, 255, 0.4);
+    /*border-bottom: 1px solid rgb(21, 214, 255);*/
+}
+
+
+.conversation dd {
+    font-weight: 600;
 }
 
 .date {
@@ -107,7 +110,7 @@
 }
 
 .username {
-    color: #A60000;
+    /*color: #A60000;*/
 }
 
 .message-container {
@@ -129,9 +132,83 @@
 
 @media screen and (-ms-view-state: snapped) {
     .conversation section[role=main] {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
+
+    .conversation #partner-picture-container {
+        display: none;
+    }
+
+    .conversation #partner-details-container {
+        height: auto;
+        background: transparent;
+    }
+
+    .conversation #partner-info-container {
+        height: auto;
+    }
+
+    .conversation #chat-container {
+        width: 100%;
+    }
+
+    .conversation #message-content-text {
+        width: 98%;
+    }
+
+    .conversation.fragment {
+        -ms-grid-columns: none;
+        -ms-grid-rows: none;
+        display: block;
+    }
+
+        .conversation.fragment header[role=banner] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+            .conversation.fragment header[role=banner] .titlearea {
+                display: none;
+            }
+
+            .conversation.fragment header[role=banner] .win-backbutton {
+                position: absolute;
+                top: 50px;
+                left: 20px;
+                margin: 0;
+            }
+
+            .conversation.fragment header[role=banner] .titlearea {
+                display: none;
+            }
+
+    #send-message-button {
+        width: 100%;
+    }
+
+
+    .conversation .win-listview dd {
+        min-height: 40px;
+    }
+
+
+    .partner dt, .user dt {
+        padding: 5px 15px;
+        font-weight: 500;
+        font-size: 11px;
+    }
+
+    .partner dt {
+        background: rgba(21, 214, 255, 0.3);
+    }
+
+    .user dt {
+        background: rgba(255, 133, 25, 0.3);
+    }
+
 }
 
 @media screen and (-ms-view-state: fullscreen-portrait) {
