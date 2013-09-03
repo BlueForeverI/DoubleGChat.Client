@@ -65,7 +65,7 @@
                 if (storageFile) {
                     var container = document.getElementById("profile-image-container");
                     container.setAttribute("src", "../../images/loading.gif");
-
+                    
                     uploadImage(storageFile).then(function (url) {
                         container.setAttribute("src", url);
                     });

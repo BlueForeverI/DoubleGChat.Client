@@ -54,9 +54,11 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="css\default.css" />
+    <Content Include="images\contact-request.png" />
     <Content Include="images\default-profile-picture.jpeg" />
     <Content Include="images\loading.gif" />
     <Content Include="images\logo.png" />
+    <Content Include="images\new-conversation.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
@@ -76,7 +78,6 @@
     <Content Include="js\navigator.js" />
     <Content Include="js\notifications.js" />
     <Content Include="js\pubnub.js" />
-    <Content Include="js\repeater-control.js" />
     <Content Include="js\sha1.js" />
     <Content Include="js\user-model.js" />
     <Content Include="js\view-models\contacts-view-model.js" />
