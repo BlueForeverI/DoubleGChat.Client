@@ -7,6 +7,10 @@
     <link href="contact-requests.css" rel="stylesheet" />
 </head>
 <body>
+    <div id="nav-bar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement: 'top'}">
+        <button onclick='DoubleGChat.CodeBehind.Default.navigateToContacts()' data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdContacts', label:'Your Contacts', icon:'viewall'}" type="button"></button>
+        <button onclick='DoubleGChat.CodeBehind.Default.logout(event)' data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdLeave', label:'Log out', icon:'left'}" type="button"></button>
+    </div>
     <div id="contact-requests-template-container" data-win-control="WinJS.Binding.Template">
         <div class="user-template">
             <img src="#" data-win-bind="src: sender.profilePictureUrl" height="150" width="150" />
@@ -33,7 +37,7 @@
             </div>
         </section>
     </div>
-    
+
     <div id="app-bar" data-win-control="WinJS.UI.AppBar">
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Add to Contacts', icon:'accept', onclick: DoubleGChat.CodeBehind.ContactRequests.acceptContact}" type="button"></button>
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd2', label:'Cancel Contact Request', icon:'cancel', onclick: DoubleGChat.CodeBehind.ContactRequests.cancelContact}" type="button"></button>

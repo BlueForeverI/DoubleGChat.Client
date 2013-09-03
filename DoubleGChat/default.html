@@ -10,7 +10,7 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="/css/default.css" rel="stylesheet" />
-    
+
     <!-- Common Scripts -->
     <script src="js/user-model.js"></script>
     <script src="js/sha1.js"></script>
@@ -18,20 +18,20 @@
     <script src="js/data-requester.js"></script>
     <script src="js/pubnub.js"></script>
     <script src="js/notifications.js"></script>
-    
+
     <!-- View-Models Scripts -->
     <script src="js/view-models/user-view-model.js"></script>
     <script src="js/view-models/contacts-view-model.js"></script>
     <script src="js/view-models/search-view-model.js"></script>
     <script src="js/view-models/global-view-model.js"></script>
     <script src="js/view-models/conversation-view-model.js"></script>
-    
+
     <!-- Data Layers Scripts -->
     <script src="js/data/contacts-data-layer.js"></script>
     <script src="js/data/search-data-layer.js"></script>
     <script src="js/data/user-data-layer.js"></script>
     <script src="js/data/conversation-data-layer.js"></script>
-    
+
     <!-- Controllers Scripts -->
     <script src="js/controllers/contact-request-controller.js"></script>
     <script src="js/controllers/contacts-controller.js"></script>
@@ -60,15 +60,9 @@
     <script src="/js/navigator.js"></script>
 </head>
 <body>
-    <button onclick="DoubleGChat.CodeBehind.Default.logout(event)">logout</button>
-    <button onclick="DoubleGChat.CodeBehind.Default.goToRegister(event)">Register</button>
-
     <button onclick="DoubleGChat.CodeBehind.Default.navigateToContactRequests(event)" data-win-bind="innerText: contactRequestsCount.requestCount"></button>
     <button onclick="DoubleGChat.CodeBehind.Default.navigateToConversations()" data-win-bind="innerText: missedConversations.count"></button>
 
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/login/login.html'}"></div>
-     <div id="nav-bar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement: 'top'}">
-        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
-    </div> 
 </body>
 </html>

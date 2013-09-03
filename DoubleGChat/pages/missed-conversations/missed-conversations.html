@@ -6,6 +6,10 @@
     <link href="missed-conversations.css" rel="stylesheet" />
 </head>
 <body>
+    <div id="nav-bar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement: 'top'}">
+        <button onclick='DoubleGChat.CodeBehind.Default.navigateToContacts()' data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdContacts', label:'Your Contacts', icon:'viewall'}" type="button"></button>
+        <button onclick='DoubleGChat.CodeBehind.Default.logout(event)' data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdLeave', label:'Log out', icon:'left'}" type="button"></button>
+    </div>
     <div id="user-template-container" data-win-control="WinJS.Binding.Template">
         <div class="computer-template">
             <img src="#" data-win-bind="src: profilePictureUrl" height="150" width="150" />
