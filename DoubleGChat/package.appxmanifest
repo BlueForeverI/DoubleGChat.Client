@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="a0b3455d-c06e-44f2-9097-6fd554447f59" Version="1.0.0.0" Publisher="CN=Georgi" />
+  <Identity Name="39679GeorgiYolovski.DoubleGChat" Version="1.0.0.0" Publisher="CN=DFD86CBF-6FF5-4BDE-9217-1AB18F479864" />
   <Properties>
-    <DisplayName>DoubleGChat</DisplayName>
-    <PublisherDisplayName>Georgi Yolovski &amp; Georgi Vorobyov</PublisherDisplayName>
+    <DisplayName>DoubleG Chat</DisplayName>
+    <PublisherDisplayName>GeorgiYolovski</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
   <Prerequisites>

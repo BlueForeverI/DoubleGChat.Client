@@ -5,18 +5,18 @@
     <WindowsUser>George</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>2BED4497358AE4D1D7255E543935BA009CA395249F009F21E7F7AE7305537CEB</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>a0b3455d-c06e-44f2-9097-6fd554447f59_1.0.0.0_neutral__npysjcx1rdjd6</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>a0b3455d-c06e-44f2-9097-6fd554447f59_npysjcx1rdjd6!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>a0b3455d-c06e-44f2-9097-6fd554447f59</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Georgi</RegisteredPackagePublisher>
+    <RegisteredManifestChecksum>FE3E03BEA986AD716BE0CFBDF30F98178D148741FD57F14ADB4A4A8261D1C119</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>39679GeorgiYolovski.DoubleGChat_1.0.0.0_neutral__vdpk1prj0gnqm</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>39679GeorgiYolovski.DoubleGChat_vdpk1prj0gnqm!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>39679GeorgiYolovski.DoubleGChat</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=DFD86CBF-6FF5-4BDE-9217-1AB18F479864</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-09-03T19:12:53.705</Modified>
+      <Modified>2013-09-03T19:26:25.595</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -303,7 +303,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-09-03T19:12:53.510</Modified>
+      <Modified>2013-09-03T19:26:25.473</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

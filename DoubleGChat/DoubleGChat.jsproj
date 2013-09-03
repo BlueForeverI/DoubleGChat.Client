@@ -47,13 +47,16 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>DoubleGChat_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>DoubleGChat_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <PackageCertificateThumbprint>9CD92399D4A60810E5632B6DA4942EC24FFEC090</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="css\default.css" />
+    <None Include="DoubleGChat_StoreKey.pfx" />
     <Content Include="images\badgelogo.png" />
     <Content Include="images\contact-request.png" />
     <Content Include="images\default-profile-picture.jpeg" />
@@ -87,6 +90,7 @@
     <Content Include="js\view-models\global-view-model.js" />
     <Content Include="js\view-models\search-view-model.js" />
     <Content Include="js\view-models\user-view-model.js" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="pages\change-profile-picture\change-profile-picture.css" />
     <Content Include="pages\change-profile-picture\change-profile-picture.html" />
     <Content Include="pages\change-profile-picture\change-profile-picture.js" />
