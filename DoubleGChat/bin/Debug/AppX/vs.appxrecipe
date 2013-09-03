@@ -54,7 +54,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\register\register.css">
       <PackagePath>pages\register\register.css</PackagePath>
-      <Modified>2013-09-03T09:04:29.584</Modified>
+      <Modified>2013-09-03T09:21:19.673</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\search-results\search-results.css">
       <PackagePath>pages\search-results\search-results.css</PackagePath>

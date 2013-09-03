@@ -67,7 +67,7 @@ input {
     margin-top: 10px;
 }
 
-section {
+.register_fragment section {
     margin-top: 40px;
 }
 
@@ -75,6 +75,15 @@ section {
     .register section[role=main] {
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+    #contenthost {
+        position: absolute;
+        left: 20px;
+    }
+
+    #information-form {
+        display: none;
     }
 }
 
