@@ -3,7 +3,7 @@
 
     var picker = Windows.Storage.Pickers.FileOpenPicker();
     var camera = new Windows.Media.Capture.CameraCaptureUI();
-    var errorMessage = "There was a problem with the Internet connection. Please, check your network connection.";
+    var errorMessage = "There was a problem with the Internet connection.";
 
     var getUserCredentials = function () {
         return DoubleGChat.Data.User.getUserCredentials();

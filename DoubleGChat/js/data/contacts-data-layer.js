@@ -12,8 +12,12 @@
                 var data = JSON.parse(response.response);
                 success(data);
             }, function (response) {
-                var data = JSON.parse(response.response);
-                error(data);
+                if (response.response == "") {
+                    error("");
+                } else {
+                    var text = JSON.parse(response.response);
+                    error(text);
+                }
             });
         });
     };
@@ -27,8 +31,12 @@
                 var data = JSON.parse(response.response);
                 success(data);
             }, function (response) {
-                var data = JSON.parse(response.response);
-                error(data);
+                if (response.response == "") {
+                    error("");
+                } else {
+                    var text = JSON.parse(response.response);
+                    error(text);
+                }
             });
         });
     };
@@ -39,8 +47,12 @@
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(sendContactUrl, "get", null, user.sessionKey)
             .done(success, function (response) {
-                var data = JSON.parse(response.response);
-                error(data);
+                if (response.response == "") {
+                    error("");
+                } else {
+                    var text = JSON.parse(response.response);
+                    error(text);
+                }
             });
         });
     };
@@ -51,8 +63,12 @@
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(acceptContactUrl, "get", null, user.sessionKey)
             .done(success, function (response) {
-                var data = JSON.parse(response.response);
-                error(data);
+                if (response.response == "") {
+                    error("");
+                } else {
+                    var text = JSON.parse(response.response);
+                    error(text);
+                }
             });
         });
     };
@@ -63,8 +79,12 @@
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(denyContactUrl, "get", null, user.sessionKey)
             .done(success, function (response) {
-                var data = JSON.parse(response.response);
-                error(data);
+                if (response.response == "") {
+                    error("");
+                } else {
+                    var text = JSON.parse(response.response);
+                    error(text);
+                }
             });
         });
     };

@@ -16,9 +16,13 @@
             }, user.sessionKey).then(function (data) {
                 var jsonData = JSON.parse(data.response);
                 success(jsonData);
-            }, function (data) {
-                var jsonData = JSON.parse(data.response);
-                error(jsonData);
+            }, function (response) {
+                if (response.response == "") {
+                    error("");
+                } else {
+                    var text = JSON.parse(response.response);
+                    error(text);
+                }
             });
         });
     };
@@ -31,9 +35,13 @@
                 .then(function (data) {
                     var messages = JSON.parse(data.response);
                     success(messages);
-                }, function (data) {
-                    var jsonData = JSON.parse(data.response);
-                    error(jsonData);
+                }, function (response) {
+                    if (response.response == "") {
+                        error("");
+                    } else {
+                        var text = JSON.parse(response.response);
+                        error(text);
+                    }
                 });
         });
     };
@@ -47,9 +55,13 @@
                 sender: user,
                 conversation: { id: conversationId }
             }, user.sessionKey)
-            .then(success, function (data) {
-                var jsonData = JSON.parse(data.response);
-                error(jsonData);
+            .then(success, function (response) {
+                if (response.response == "") {
+                    error("");
+                } else {
+                    var text = JSON.parse(response.response);
+                    error(text);
+                }
             });
         });
     };
@@ -62,9 +74,13 @@
                 .then(function (data) {
                     var jsonData = JSON.parse(data.response);
                     success(jsonData);
-                }, function (data) {
-                    var jsonData = JSON.parse(data.response);
-                    error(jsonData);
+                }, function (response) {
+                    if (response.response == "") {
+                        error("");
+                    } else {
+                        var text = JSON.parse(response.response);
+                        error(text);
+                    }
                 });
         });
     };
@@ -74,9 +90,13 @@
         var user = DoubleGChat.Data.User.getUserCredentials();
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.RemoteData.sendRequest(missedUrl, "get", null, user.sessionKey)
-                .then(success, function (data) {
-                    var jsonData = JSON.parse(data.response);
-                    error(jsonData);
+                .then(success, function (response) {
+                    if (response.response == "") {
+                        error("");
+                    } else {
+                        var text = JSON.parse(response.response);
+                        error(text);
+                    }
                 });
         });
     };
