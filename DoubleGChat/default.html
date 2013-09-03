@@ -60,9 +60,14 @@
     <script src="/js/navigator.js"></script>
 </head>
 <body>
-    <button onclick="DoubleGChat.CodeBehind.Default.navigateToContactRequests(event)" data-win-bind="innerText: contactRequestsCount.requestCount"></button>
-    <button onclick="DoubleGChat.CodeBehind.Default.navigateToConversations()" data-win-bind="innerText: missedConversations.count"></button>
-
+    <button id="contact-request-button"
+        onclick="DoubleGChat.CodeBehind.Default.navigateToContactRequests(event)"
+        data-win-bind="innerText: contactRequestsCount.requestCount">
+    </button>
+    <button id="missed-conversation-button"
+        onclick="DoubleGChat.CodeBehind.Default.navigateToConversations()"
+        data-win-bind="innerText: missedConversations.count">
+    </button>
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/login/login.html'}"></div>
 </body>
 </html>

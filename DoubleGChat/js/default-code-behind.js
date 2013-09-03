@@ -12,6 +12,10 @@
         WinJS.Navigation.navigate("/pages/register/register.html");
     };
 
+    var navigateToConversations = function (event) {
+        WinJS.Navigation.navigate("/pages/missed-conversations/missed-conversations.html");
+    };
+
     var goToLogin = function (event) {
         WinJS.Navigation.navigate("/pages/login/login.html");
     };
@@ -35,6 +39,7 @@
         goToRegister: goToRegister,
         navigateToContactRequests: navigateToContactRequests,
         navigateToContacts: navigateToContacts,
-        goToLogin: goToLogin
+        goToLogin: goToLogin,
+        navigateToConversations: navigateToConversations
     });
 })();
