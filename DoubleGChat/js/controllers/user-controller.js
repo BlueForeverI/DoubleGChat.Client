@@ -3,6 +3,7 @@
 
     var picker = Windows.Storage.Pickers.FileOpenPicker();
     var camera = new Windows.Media.Capture.CameraCaptureUI();
+    var errorMessage = "There was a problem with the Internet connection. Please, check your network connection.";
 
     var getUserCredentials = function () {
         return DoubleGChat.Data.User.getUserCredentials();
@@ -10,7 +11,7 @@
 
     var loginWIthCurrentUserSession = function () {
         return DoubleGChat.Data.User.loginWithCurrentSession();
-    }
+    };
 
     var login = function (user) {
         return new WinJS.Promise(function (success, error, progress) {
@@ -19,6 +20,10 @@
                 success();
                 DoubleGChat.ViewModels.User.errorMessage = "";
             }, function (text) {
+                if (!text) {
+                    DoubleGChat.Notifications.show(errorMessage);
+                }
+
                 DoubleGChat.ViewModels.User.errorMessage = text;
             });
         });
@@ -34,6 +39,8 @@
     var logout = function () {
         return new WinJS.Promise(function (success, error, progress) {
             DoubleGChat.Notifications.emptyChannelList();
+            DoubleGChat.ViewModels.Global.emptyContactRequestsList();
+            DoubleGChat.ViewModels.Global.resetMissedConversations();
             clearNavigationHistory();
             DoubleGChat.Data.User.logout()
             .then(success, function (text) {
@@ -49,6 +56,10 @@
                     success();
                     DoubleGChat.ViewModels.User.errorMessage = "";
                 }, function (text) {
+                    if (!text) {
+                        DoubleGChat.Notifications.show(errorMessage);
+                    }
+
                     DoubleGChat.ViewModels.User.errorMessage = text;
                 });
         });
@@ -67,9 +78,7 @@
                 if (storageFile) {
                     success(storageFile);
                 }
-            }, function (e) {
-                error(e);
-            });
+            }, error);
         });
     };
 
@@ -79,9 +88,7 @@
                 if (capturedItem) {
                     success(capturedItem);
                 }
-            }, function (e) {
-                console.log(e);
-            });
+            }, error);
         });
     };
 

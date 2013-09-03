@@ -33,10 +33,10 @@
                 DoubleGChat.RemoteData.sendRequest(loginSessionUrl, "POST", user)
                     .done(success, function() {
                         removeUserCredentials();
-                        error();
+                        error("");
                     });
             } else {
-                error();
+                error("");
             }
         });
     };
@@ -51,8 +51,12 @@
                 saveUserCredentials(user);
                 success(userDetails);
             }, function (response) {
-                var text = JSON.parse(response.response);
-                error(text);
+                if (response.response == "") {
+                    error("");
+                } else {
+                    var text = JSON.parse(response.response);
+                    error(text);
+                }
             });
         });
     };
@@ -67,8 +71,12 @@
                     removeUserCredentials();
                     success();
                 }, function (response) {
-                    var text = JSON.parse(response.response);
-                    error(text);
+                    if (response.response == "") {
+                        error("");
+                    } else {
+                        var text = JSON.parse(response.response);
+                        error(text);
+                    }
                 });
             } else {
                 error();
@@ -86,8 +94,12 @@
                     saveUserCredentials(user);
                     success(userDetails);
                 }, function (response) {
-                    var text = JSON.parse(response.response);
-                    error(text);
+                    if (response.response == "") {
+                        error("");
+                    } else {
+                        var text = JSON.parse(response.response);
+                        error(text);
+                    }
                 });
         });
     };
@@ -100,8 +112,12 @@
                 DoubleGChat.RemoteData.sendRequest(offlineUrl, "get", null, user.sessionKey)
                 .then(function () {
                 }, function (response) {
-                    var text = JSON.parse(response.response);
-                    error(text);
+                    if (response.response == "") {
+                        error("");
+                    } else {
+                        var text = JSON.parse(response.response);
+                        error(text);
+                    }
                 });
             } else {
                 error("You are not logged in.");

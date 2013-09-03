@@ -16,15 +16,24 @@
     var emptyContactRequestsList = function () {
         contactRequests.dataSource.list
             .splice(0, contactRequests.dataSource.list.length);
+        contactRequestsCount.requestCount = 0;
+    };
+
+    var resetMissedConversations = function () {
+        missedConversations.count = 0;
     };
 
     var setContactRequestsCount = function (count) {
         contactRequestsCount.requestCount = count;
-    }
-    
+    };
+
     var setMissedConversationsCount = function (count) {
         missedConversations.count = count;
     };
+
+    var requestCountToVisibility = new WinJS.Binding.converter(function (count) {
+        return count > 0 ? "inline-block" : "none";
+    });
 
     WinJS.Namespace.define("DoubleGChat.ViewModels.Global", {
         contactRequests: contactRequests,
@@ -34,6 +43,8 @@
         emptyContactRequestsList: emptyContactRequestsList,
         setContactRequestsCount: setContactRequestsCount,
         missedConversations: missedConversations,
-        setMissedConversationsCount: setMissedConversationsCount
+        setMissedConversationsCount: setMissedConversationsCount,
+        resetMissedConversations: resetMissedConversations,
+        requestCountToVisibility: requestCountToVisibility
     });
 }());
