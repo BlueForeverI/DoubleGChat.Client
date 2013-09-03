@@ -1,6 +1,11 @@
 ﻿.user-status {
     width: 10px;
     height: 10px;
+    margin-top: 10px;
+}
+
+.user-template {
+    margin: 10px;
 }
 
 .contacts section[role=main] {

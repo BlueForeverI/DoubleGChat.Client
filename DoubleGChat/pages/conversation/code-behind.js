@@ -1,5 +1,12 @@
 ﻿(function () {
     "use strict";
+    
+    var enterHandler = function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            sendMessageHandler(event);
+        }
+    };
 
     var sendMessageHandler = function () {
         var messageElement = document.getElementById("message-content-text");
@@ -8,6 +15,7 @@
     };
 
     WinJS.Namespace.define("DoubleGChat.CodeBehind.Conversation", {
-        sendMessage: sendMessageHandler
+        sendMessage: sendMessageHandler,
+        keydown: enterHandler
     });
 })();

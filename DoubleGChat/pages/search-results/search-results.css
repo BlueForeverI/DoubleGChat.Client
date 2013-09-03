@@ -16,6 +16,11 @@
         margin-top: 32px;
     }
 
+
+#search-results-list-view {
+    height: 500px;
+}
+
 .search_results section[role=main] {
     /* Define a grid with rows for the filters and results */
     -ms-grid-columns: 1fr;

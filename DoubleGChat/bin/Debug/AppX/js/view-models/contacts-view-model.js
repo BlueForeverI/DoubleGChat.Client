@@ -29,6 +29,18 @@
             if (allContacts.getAt(i).online != contacts[i].online) {
                 allContacts.getAt(i).online = contacts[i].online;
             }
+            
+            if (allContacts.getAt(i).profilePictureUrl != contacts[i].profilePictureUrl) {
+                allContacts.getAt(i).profilePictureUrl = contacts[i].profilePictureUrl;
+            }
+            
+            if (allContacts.getAt(i).firstName != contacts[i].firstName) {
+                allContacts.getAt(i).firstName = contacts[i].firstName;
+            }
+            
+            if (allContacts.getAt(i).lastName != contacts[i].lastName) {
+                allContacts.getAt(i).lastName = contacts[i].lastName;
+            }
         }
     };
 

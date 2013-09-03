@@ -60,23 +60,14 @@
     <script src="/js/navigator.js"></script>
 </head>
 <body>
-    <button onclick="DoubleGChat.CodeBehind.Default.logout(event)">logout</button>
-    <button onclick="DoubleGChat.CodeBehind.Default.goToRegister(event)">Register</button>
-   
-    <button id="contact-request-button" 
-            onclick="DoubleGChat.CodeBehind.Default.navigateToContactRequests(event)"
-            data-win-bind="innerText: contactRequestsCount.requestCount">
-            
+    <button id="contact-request-button"
+        onclick="DoubleGChat.CodeBehind.Default.navigateToContactRequests(event)"
+        data-win-bind="innerText: contactRequestsCount.requestCount">
     </button>
-    <button id="missed-conversation-button" 
-            onclick="DoubleGChat.CodeBehind.Default.navigateToConversations()"
-            data-win-bind="innerText: missedConversations.count">
-            
+    <button id="missed-conversation-button"
+        onclick="DoubleGChat.CodeBehind.Default.navigateToConversations()"
+        data-win-bind="innerText: missedConversations.count">
     </button>
-
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/login/login.html'}"></div>
-    <div id="nav-bar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement: 'top'}">
-        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
-    </div>
 </body>
 </html>

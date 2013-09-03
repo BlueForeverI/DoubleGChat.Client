@@ -7,6 +7,13 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
+            document.getElementById("settings-form").addEventListener("keydown", function(event) {
+                if (event.keyCode == 13) {
+                    event.preventDefault();
+                    saveEventHandler(event);
+                }
+            });
+
             var firstName = document.getElementById("first-name");
             var lastName = document.getElementById("last-name");
             var oldPassword = document.getElementById("old-password");
@@ -17,7 +24,11 @@
             firstName.value = userInfo.firstName;
             lastName.value = userInfo.lastName;
 
-            saveButton.addEventListener("click", function() {
+            saveButton.addEventListener("click", function(event) {
+                saveEventHandler(event);
+            });
+
+            function saveEventHandler (event) {
                 var firstNameValue = firstName.value;
                 var lastNameValue = lastName.value;
                 var oldPasswordValue = oldPassword.value;
@@ -38,10 +49,11 @@
                         var user = JSON.parse(userDetails.responseText);
                         DoubleGChat.Data.User.saveUserCredentials(user);
                         DoubleGChat.Notifications.show("User details saved successfuly!");
+                        document.getElementById("settings-flyout").winControl.hide();
                     }, function (error) {
                         DoubleGChat.Notifications.show(error);
-                });
-            });
+                    });
+            }
         },
 
         unload: function () {

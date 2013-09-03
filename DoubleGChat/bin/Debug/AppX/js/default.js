@@ -78,12 +78,6 @@
         // suspended, call args.setPromise().
         args.setPromise(DoubleGChat.Controllers.User.goOffline());
         app.sessionState.history = nav.history;
-        //WinJS.UI.AppBarIcon.go
-        //WinJS.UI.AppBarIcon.globe
-        //WinJS.UI.AppBarIcon.more
-        //WinJS.UI.AppBarIcon.memo
-        //WinJS.UI.AppBarIcon.
-
     };
 
     app.start();

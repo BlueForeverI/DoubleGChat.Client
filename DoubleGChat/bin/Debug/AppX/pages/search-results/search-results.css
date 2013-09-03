@@ -1,4 +1,8 @@
-﻿.search_results header[role=banner] .titlearea {
+﻿.search_results .win-listview  {
+    margin: 150px 120px;
+}
+
+.search_results header[role=banner] .titlearea {
     -ms-grid-columns: auto 20px 1fr 20px;
     display: -ms-grid;
 }
@@ -11,6 +15,11 @@
         -ms-grid-column: 3;
         margin-top: 32px;
     }
+
+
+#search-results-list-view {
+    height: 500px;
+}
 
 .search_results section[role=main] {
     /* Define a grid with rows for the filters and results */
