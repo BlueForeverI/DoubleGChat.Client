@@ -1,26 +1,48 @@
 ﻿#contenthost {
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 #missed-conversation-button, #contact-request-button {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    position: absolute;
+    top: 50px;
     width: 50px;
     height: 50px;
     font-size: 30px;
+    text-align: right;
     font-weight: bold;
-    color: red;
+    color: #282727;
+    border: none;
 }
 
 #missed-conversation-button {
-    background-image: url('../images/new-conversation.png');
+    background: url('../images/stories-icon.png') no-repeat 10px 0px;
+    background-size: 50px;
+    right: 150px;
 }
 
+    #missed-conversation-button:hover {
+        background-color: aquamarine;
+    }
+
+    #missed-conversation-button:active {
+        background-color: #64C9A7;
+    }
+
 #contact-request-button {
-    background-image: url('../images/contact-request.png');
+    background: url('../images/person.png') no-repeat 10px 2px;
+    background-size: 45px;
+    right: 250px;
 }
+
+    #contact-request-button:hover {
+        background-color: aquamarine;
+    }
+
+    #contact-request-button:active {
+        background-color: #64C9A7;
+    }
 
 .fragment {
     /* Define a grid with rows for a banner and a body */

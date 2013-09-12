@@ -1,4 +1,8 @@
-﻿.user-status {
+﻿.win-listview {
+   height: 100%;
+}
+
+.user-status {
     width: 10px;
     height: 10px;
     margin-top: 10px;
