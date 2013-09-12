@@ -63,9 +63,11 @@
     <Content Include="images\loading.gif" />
     <Content Include="images\logo.png" />
     <Content Include="images\new-conversation.png" />
+    <Content Include="images\person.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
+    <Content Include="images\stories-icon.png" />
     <Content Include="images\widelogo.png" />
     <Content Include="js\constants.js" />
     <Content Include="js\controllers\contact-request-controller.js" />

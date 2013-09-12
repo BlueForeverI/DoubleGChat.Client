@@ -1,12 +1,25 @@
-﻿.conversation .win-listview {
+﻿dt {
+    display: none;
+    margin: 0px;
+    top: -5px;
+    left: 200px;
+}
+
+.conversation .win-listview {
     height: 500px;
     width: 100%;
 }
 
     .conversation .win-listview .win-item {
-        /*min-height:*/
         margin: 0px;
+        margin-top: -20px;
+        margin-bottom: -20px;
+        margin-left: -10%;
         padding: 0px;
+        background: white;
+        width: 120%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .conversation .win-listview .win-container {
@@ -14,8 +27,8 @@
         padding: 0px;
     }
 
-    .conversation .win-listview dd, dt {
-        display: inline;
+    .conversation .win-listview dd {
+        display: inline-block;
         margin: 0px;
     }
 
@@ -23,12 +36,10 @@
         padding: 20px;
         min-height: 100px;
         width: 100%;
-        float: left;
     }
 
     .conversation .win-listview dt {
         text-align: right;
-        float: right;
         padding-right: 10px;
     }
 
@@ -59,8 +70,9 @@
 }
 
 #partner-info-container, #chat-container {
-    display: inline;
-    float: left;
+    position: absolute;
+    /*display: inline;*/
+    /*float: left;*/
 }
 
 #send-controls-container {
@@ -68,8 +80,11 @@
 }
 
 #chat-container {
-    width: 70%;
+    left: 370px;
+    width: 60%;
+    overflow: hidden;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 #partner-info-container {
@@ -84,11 +99,13 @@
 }
 
 #partner-details-container {
-    height: 65%;
+    height: 49%;
     background: rgba(21, 214, 255, 0.4);
 }
 
 #partner-username {
+    display: block;
+    padding-top: 20px;
     color: #004554;
     font-size: 20px;
     font-weight: bold;
@@ -101,11 +118,11 @@
 }
 
 .user dd {
-    background: rgba(255, 133, 25, 0.4);
+    background: rgb(255, 206, 163);
 }
 
 .partner dd {
-    background: rgba(21, 214, 255, 0.4);
+    background: rgb(161, 239, 255);
     /*border-bottom: 1px solid rgb(21, 214, 255);*/
 }
 
@@ -128,7 +145,7 @@
 }
 
 #message-content-text {
-    width: 77%;
+    width: 78%;
     height: 60px;
     font-size: 20px;
 }
@@ -140,6 +157,10 @@
 }
 
 @media screen and (-ms-view-state: snapped) {
+    #partner-info-container, #chat-container {
+        position: static;
+    }
+
     .conversation section[role=main] {
         margin-left: 0px;
         margin-right: 0px;
@@ -159,7 +180,9 @@
     }
 
     .conversation #chat-container {
+        margin-top: 20px;
         width: 100%;
+        height: 75%;
     }
 
     .conversation #message-content-text {
@@ -201,11 +224,19 @@
 
 
     .conversation .win-listview dd {
+        position: relative;
+        z-index: 10;
         min-height: 40px;
     }
 
+    .conversation .win-listview {
+        height: 100%;
+    }
 
     .partner dt, .user dt {
+        position: relative;
+        z-index: 0;
+        display: inline-block;
         padding: 5px 15px;
         font-weight: 500;
         font-size: 11px;
@@ -217,6 +248,25 @@
 
     .user dt {
         background: rgba(255, 133, 25, 0.3);
+    }
+
+    #chat-container {
+        margin-left: 0px;
+    }
+
+    #send-controls-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    #messages-container {
+        height: 100%;
+    }
+
+    #partner-info-container {
+        padding-top: 10px;
+        width: 320px;
     }
 }
 
