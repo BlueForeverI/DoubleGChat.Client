@@ -62,7 +62,9 @@
             e.detail.applicationcommands =
                 {
                     "profile-settings": { title: "Profile Settings", href: "/pages/profile-settings/profile-settings.html" },
-                    "change-profile-picture": { title: "Change Profile Picture", href: "/pages/change-profile-picture/change-profile-picture.html" }
+                    "change-profile-picture": { title: "Change Profile Picture", href: "/pages/change-profile-picture/change-profile-picture.html" },
+                    "privacy-policy": { title: "Privacy Policy", href: "/pages/privacy-policy/privacy-policy.html" },
+                    
                 };
 
             WinJS.UI.SettingsFlyout.populateSettings(e);
@@ -76,7 +78,8 @@
         // that needs to persist across suspensions here. If you need to 
         // complete an asynchronous operation before your application is 
         // suspended, call args.setPromise().
-        args.setPromise(DoubleGChat.Controllers.User.goOffline());
+        //args.setPromise(DoubleGChat.Controllers.User.goOffline());
+        DoubleGChat.Controllers.User.goOffline();
         app.sessionState.history = nav.history;
     };
 

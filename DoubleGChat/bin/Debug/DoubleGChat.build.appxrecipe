@@ -34,6 +34,9 @@
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\missed-conversations\missed-conversations.css">
       <PackagePath>pages\missed-conversations\missed-conversations.css</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\privacy-policy\privacy-policy.css">
+      <PackagePath>pages\privacy-policy\privacy-policy.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\profile-settings\profile-settings.css">
       <PackagePath>pages\profile-settings\profile-settings.css</PackagePath>
     </AppxPackagedFile>
@@ -180,6 +183,9 @@
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\missed-conversations\missed-conversations.js">
       <PackagePath>pages\missed-conversations\missed-conversations.js</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\privacy-policy\privacy-policy.js">
+      <PackagePath>pages\privacy-policy\privacy-policy.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\profile-settings\profile-settings.js">
       <PackagePath>pages\profile-settings\profile-settings.js</PackagePath>
     </AppxPackagedFile>
@@ -215,6 +221,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\missed-conversations\missed-conversations.html">
       <PackagePath>pages\missed-conversations\missed-conversations.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\privacy-policy\privacy-policy.html">
+      <PackagePath>pages\privacy-policy\privacy-policy.html</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\profile-settings\profile-settings.html">
       <PackagePath>pages\profile-settings\profile-settings.html</PackagePath>

@@ -24,7 +24,7 @@
     <Application Id="App" StartPage="default.html">
       <VisualElements DisplayName="DoubleG Chat" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="A minimalistic instant messaging application" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
         <DefaultTile ShowName="allLogos" WideLogo="images\widelogo.png" ShortName="GChat" />
-        <SplashScreen Image="images\splashscreen.png" />
+        <SplashScreen Image="images\splashscreen.png" BackgroundColor="#FFFFFF" />
       </VisualElements>
       <Extensions>
         <Extension Category="windows.search" />

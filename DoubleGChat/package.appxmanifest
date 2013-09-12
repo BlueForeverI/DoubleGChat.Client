@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="39679GeorgiYolovski.DoubleGChat" Version="1.0.0.0" Publisher="CN=DFD86CBF-6FF5-4BDE-9217-1AB18F479864" />
+  <Identity Name="39679GeorgiYolovski.DoubleGChat" Version="1.0.0.1" Publisher="CN=DFD86CBF-6FF5-4BDE-9217-1AB18F479864" />
   <Properties>
     <DisplayName>DoubleG Chat</DisplayName>
     <PublisherDisplayName>GeorgiYolovski</PublisherDisplayName>
@@ -17,7 +17,7 @@
     <Application Id="App" StartPage="default.html">
       <VisualElements DisplayName="DoubleG Chat" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="A minimalistic instant messaging application" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
         <DefaultTile ShowName="allLogos" WideLogo="images\widelogo.png" ShortName="GChat" />
-        <SplashScreen Image="images\splashscreen.png" />
+        <SplashScreen Image="images\splashscreen.png" BackgroundColor="#FFFFFF" />
       </VisualElements>
       <Extensions>
         <Extension Category="windows.search" />

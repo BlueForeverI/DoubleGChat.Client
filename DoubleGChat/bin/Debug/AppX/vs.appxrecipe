@@ -5,7 +5,7 @@
     <WindowsUser>George</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>FE3E03BEA986AD716BE0CFBDF30F98178D148741FD57F14ADB4A4A8261D1C119</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>4CF31534C6ED0E26F61D18BCCBE4A348D44B08D6115CE9F81375B4967A3685EB</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>39679GeorgiYolovski.DoubleGChat_1.0.0.0_neutral__vdpk1prj0gnqm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>39679GeorgiYolovski.DoubleGChat_vdpk1prj0gnqm!App</RegisteredUserModeAppID>
     <RegisteredPackageID>39679GeorgiYolovski.DoubleGChat</RegisteredPackageID>
@@ -16,7 +16,7 @@
     <AppXManifest Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-09-03T19:26:25.595</Modified>
+      <Modified>2013-09-12T10:31:30.223</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +47,10 @@
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\missed-conversations\missed-conversations.css">
       <PackagePath>pages\missed-conversations\missed-conversations.css</PackagePath>
       <Modified>2013-09-02T21:57:22.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\privacy-policy\privacy-policy.css">
+      <PackagePath>pages\privacy-policy\privacy-policy.css</PackagePath>
+      <Modified>2013-09-12T10:27:59.645</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\profile-settings\profile-settings.css">
       <PackagePath>pages\profile-settings\profile-settings.css</PackagePath>
@@ -111,7 +115,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\controllers\contact-request-controller.js">
       <PackagePath>js\controllers\contact-request-controller.js</PackagePath>
-      <Modified>2013-09-02T21:57:21.904</Modified>
+      <Modified>2013-09-11T17:26:32.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\controllers\contacts-controller.js">
       <PackagePath>js\controllers\contacts-controller.js</PackagePath>
@@ -119,7 +123,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\controllers\conversation-controller.js">
       <PackagePath>js\controllers\conversation-controller.js</PackagePath>
-      <Modified>2013-09-03T10:08:53.453</Modified>
+      <Modified>2013-09-11T17:26:32.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\controllers\search-controller.js">
       <PackagePath>js\controllers\search-controller.js</PackagePath>
@@ -155,7 +159,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2013-09-03T11:24:52.466</Modified>
+      <Modified>2013-09-12T10:27:11.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\navigator.js">
       <PackagePath>js\navigator.js</PackagePath>
@@ -171,7 +175,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\sha1.js">
       <PackagePath>js\sha1.js</PackagePath>
-      <Modified>2013-09-02T21:57:21.979</Modified>
+      <Modified>2013-09-03T19:47:01.173</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\js\user-model.js">
       <PackagePath>js\user-model.js</PackagePath>
@@ -241,6 +245,10 @@
       <PackagePath>pages\missed-conversations\missed-conversations.js</PackagePath>
       <Modified>2013-09-02T21:57:22.099</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\privacy-policy\privacy-policy.js">
+      <PackagePath>pages\privacy-policy\privacy-policy.js</PackagePath>
+      <Modified>2013-09-12T10:29:24.676</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\profile-settings\profile-settings.js">
       <PackagePath>pages\profile-settings\profile-settings.js</PackagePath>
       <Modified>2013-09-03T13:34:21.682</Modified>
@@ -289,6 +297,10 @@
       <PackagePath>pages\missed-conversations\missed-conversations.html</PackagePath>
       <Modified>2013-09-03T11:24:52.497</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\privacy-policy\privacy-policy.html">
+      <PackagePath>pages\privacy-policy\privacy-policy.html</PackagePath>
+      <Modified>2013-09-12T10:31:27.773</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\pages\profile-settings\profile-settings.html">
       <PackagePath>pages\profile-settings\profile-settings.html</PackagePath>
       <Modified>2013-09-03T13:32:44.344</Modified>
@@ -303,7 +315,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\George\Documents\Win8 JS\Teamwork\DoubleGChat.Client\DoubleGChat\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-09-03T19:26:25.473</Modified>
+      <Modified>2013-09-12T10:31:29.412</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

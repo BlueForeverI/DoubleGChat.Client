@@ -115,6 +115,9 @@
     <Content Include="pages\missed-conversations\missed-conversations.css" />
     <Content Include="pages\missed-conversations\missed-conversations.html" />
     <Content Include="pages\missed-conversations\missed-conversations.js" />
+    <Content Include="pages\privacy-policy\privacy-policy.css" />
+    <Content Include="pages\privacy-policy\privacy-policy.html" />
+    <Content Include="pages\privacy-policy\privacy-policy.js" />
     <Content Include="pages\profile-settings\profile-settings.css" />
     <Content Include="pages\profile-settings\profile-settings.html" />
     <Content Include="pages\profile-settings\profile-settings.js" />

@@ -56,6 +56,9 @@ pages\missed-conversations\code-behind.js
 pages\missed-conversations\missed-conversations.css
 pages\missed-conversations\missed-conversations.html
 pages\missed-conversations\missed-conversations.js
+pages\privacy-policy\privacy-policy.css
+pages\privacy-policy\privacy-policy.html
+pages\privacy-policy\privacy-policy.js
 pages\profile-settings\profile-settings.css
 pages\profile-settings\profile-settings.html
 pages\profile-settings\profile-settings.js
