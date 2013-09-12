@@ -92,7 +92,9 @@
     <Content Include="js\view-models\global-view-model.js" />
     <Content Include="js\view-models\search-view-model.js" />
     <Content Include="js\view-models\user-view-model.js" />
-    <None Include="Package.StoreAssociation.xml" />
+    <None Include="Package.StoreAssociation.xml">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="pages\change-profile-picture\change-profile-picture.css" />
     <Content Include="pages\change-profile-picture\change-profile-picture.html" />
     <Content Include="pages\change-profile-picture\change-profile-picture.js" />
