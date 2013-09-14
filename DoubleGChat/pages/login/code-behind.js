@@ -23,8 +23,13 @@
             });
     };
 
+    var registerHandler = function(event) {
+        WinJS.Navigation.navigate("/pages/register/register.html");
+    };
+
     WinJS.Namespace.define("DoubleGChat.CodeBehind.UserLogin", {
         login: loginHandler,
-        keydown: enterHandler
+        keydown: enterHandler,
+        register: registerHandler
     });
 })();
