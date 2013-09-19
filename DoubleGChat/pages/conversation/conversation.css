@@ -71,8 +71,6 @@
 
 #partner-info-container, #chat-container {
     position: absolute;
-    /*display: inline;*/
-    /*float: left;*/
 }
 
 #send-controls-container {
@@ -100,7 +98,7 @@
 
 #partner-details-container {
     height: 49%;
-    background: rgba(21, 214, 255, 0.4);
+    background: powderblue;
 }
 
 #partner-username {
@@ -122,7 +120,7 @@
 }
 
 .partner dd {
-    background: rgb(161, 239, 255);
+    background: powderblue;
     /*border-bottom: 1px solid rgb(21, 214, 255);*/
 }
 
@@ -145,15 +143,17 @@
 }
 
 #message-content-text {
-    width: 78%;
+    width: 78% !important;
     height: 60px;
     font-size: 20px;
+    display: inline-block !important;
 }
 
 #send-message-button {
     width: 20%;
     height: 60px;
     font-size: 20px;
+    display: inline-block !important;
 }
 
 @media screen and (-ms-view-state: snapped) {
