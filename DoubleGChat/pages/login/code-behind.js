@@ -17,14 +17,19 @@
         var user = DoubleGChat.Models.User.define({ username: userName, passwordHash: password });
         DoubleGChat.Controllers.User.login(user)
             .then(function () {
-                WinJS.Navigation.navigate("/pages/contacts/contacts.html");
+                DoubleGChat.CodeBehind.Default.navigateToContacts();
             }, function (error) {
                 DoubleGChat.ViewModels.User.errorMessage = error;
             });
     };
 
+    var registerHandler = function (event) {
+        DoubleGChat.CodeBehind.Default.goToRegister();
+    };
+
     WinJS.Namespace.define("DoubleGChat.CodeBehind.UserLogin", {
         login: loginHandler,
-        keydown: enterHandler
+        keydown: enterHandler,
+        register: registerHandler
     });
 })();

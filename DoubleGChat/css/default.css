@@ -16,6 +16,19 @@
     border: none;
 }
 
+
+.win-backbutton {
+    display: none;
+}
+
+#nav-bar {
+    background-color: powderblue;
+}
+
+#app-bar {
+    background-color: powderblue;
+}
+
 #missed-conversation-button {
     background: url('../images/stories-icon.png') no-repeat 10px 0px;
     background-size: 50px;

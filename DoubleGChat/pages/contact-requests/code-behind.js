@@ -10,22 +10,26 @@
     var acceptContact = function () {
         var listView = document.getElementById("contact-requests-list-view").winControl;
         listView.selection.getItems().then(function (items) {
-            var currentRequest = items[0].data;
-            DoubleGChat.Controllers.ContactsRequests.acceptContactRequest(currentRequest.id)
-            .then(function () {
-                WinJS.Navigation.navigate("/pages/contacts/contacts.html");
-            });
+            if (items.length == 1) {
+                var currentRequest = items[0].data;
+                DoubleGChat.Controllers.ContactsRequests.acceptContactRequest(currentRequest.id)
+                    .then(function() {
+                        DoubleGChat.CodeBehind.Default.navigateToContacts();
+                    });
+            }
         });
     };
 
     var cancelContact = function () {
         var listView = document.getElementById("contact-requests-list-view").winControl;
         listView.selection.getItems().then(function (items) {
-            var currentRequest = items[0].data;
-            DoubleGChat.Controllers.ContactsRequests.denyContactRequest(currentRequest.id)
-            .then(function () {
-                WinJS.Navigation.navigate("/pages/contacts/contacts.html");
-            });
+            if (items.length == 1) {
+                var currentRequest = items[0].data;
+                DoubleGChat.Controllers.ContactsRequests.denyContactRequest(currentRequest.id)
+                    .then(function () {
+                        DoubleGChat.CodeBehind.Default.navigateToContacts();
+                    });
+            }
         });
     };
 

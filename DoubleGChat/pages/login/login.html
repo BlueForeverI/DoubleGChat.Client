@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="nav-bar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement: 'top'}">
-        <button onclick='DoubleGChat.CodeBehind.Default.goToRegister(event)' data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdContacts', label:'Register Account', icon:'register'}" type="button"></button>
+        <button onclick='DoubleGChat.CodeBehind.Default.goToRegister(event)' data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdContacts', label:'Register Account', icon:'addfriend'}" type="button"></button>
     </div>
     <div class="login_fragment">
         <header aria-label="Header content" role="banner">
@@ -24,6 +24,10 @@
                 <input id="password" type="password" name="password" value="" placeholder="password" />
                 <span class="error" data-win-bind="innerText: errorMessage"></span>
                 <button id="login" onclick="DoubleGChat.CodeBehind.UserLogin.login(event)">LOGIN</button>
+            </div>
+            <div id="register-redirect-container">
+                <p>Don't have an account?</p>
+                <a id="link-register" onclick="DoubleGChat.CodeBehind.UserLogin.register(event)">Create a new profile</a>
             </div>
         </section>
     </div>
