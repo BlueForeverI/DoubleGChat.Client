@@ -121,7 +121,6 @@
 
 .partner dd {
     background: powderblue;
-    /*border-bottom: 1px solid rgb(21, 214, 255);*/
 }
 
 
@@ -186,7 +185,7 @@
     }
 
     .conversation #message-content-text {
-        width: 98%;
+        width: 98% !important;
     }
 
     .conversation.fragment {

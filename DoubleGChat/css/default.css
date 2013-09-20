@@ -119,6 +119,20 @@
             margin-right: 5px;
             margin-top: 68px;
         }
+
+    #missed-conversation-button, #contact-request-button {
+        background-color: #AFFFE4;
+        top: -8px;
+    }
+
+    #missed-conversation-button {
+        right: -3px;
+    }
+
+    #contact-request-button {
+        background-position-y: 3px;
+        right: 240px;
+    }
 }
 
 @media screen and (-ms-view-state: fullscreen-portrait) {
